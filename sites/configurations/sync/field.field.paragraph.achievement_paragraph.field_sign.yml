@@ -1,0 +1,19 @@
+uuid: 56ccdc5c-6292-47cb-aeea-4068549bfc7b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sign
+    - paragraphs.paragraphs_type.achievement_paragraph
+id: paragraph.achievement_paragraph.field_sign
+field_name: field_sign
+entity_type: paragraph
+bundle: achievement_paragraph
+label: Подпись
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

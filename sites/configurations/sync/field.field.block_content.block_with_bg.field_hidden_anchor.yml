@@ -1,0 +1,21 @@
+uuid: e706f6a9-b82b-41e7-9b49-b163273b9474
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_bg
+    - field.storage.block_content.field_hidden_anchor
+  module:
+    - text
+id: block_content.block_with_bg.field_hidden_anchor
+field_name: field_hidden_anchor
+entity_type: block_content
+bundle: block_with_bg
+label: 'Скрытый якорь'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

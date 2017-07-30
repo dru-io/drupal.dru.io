@@ -1,0 +1,29 @@
+uuid: 7d509982-2cfe-491e-9326-63ac075cebe0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - system.menu.main-menu-inner-page
+  module:
+    - system
+  theme:
+    - classier
+id: main_menu_inner_page
+theme: classier
+region: upper_header
+weight: -9
+provider: null
+plugin: 'system_menu_block:main-menu-inner-page'
+settings:
+  id: 'system_menu_block:main-menu-inner-page'
+  label: 'Основная навигация внутренних страниц'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

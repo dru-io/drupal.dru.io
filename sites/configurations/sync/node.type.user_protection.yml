@@ -1,0 +1,17 @@
+uuid: a49ba798-5d38-4051-bf56-544675d5368d
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Политика обработки персональных данных'
+type: user_protection
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

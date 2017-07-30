@@ -1,0 +1,21 @@
+uuid: 022898b8-b493-46ad-95e7-166e34c68e8d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - text
+id: paragraph.text_and_video.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: text_and_video
+label: Подзаголовок
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

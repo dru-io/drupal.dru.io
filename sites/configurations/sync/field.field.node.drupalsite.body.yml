@@ -1,0 +1,22 @@
+uuid: 7e843519-d1b8-4604-87b6-dbd724220a55
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.drupalsite
+  module:
+    - text
+id: node.drupalsite.body
+field_name: body
+entity_type: node
+bundle: drupalsite
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

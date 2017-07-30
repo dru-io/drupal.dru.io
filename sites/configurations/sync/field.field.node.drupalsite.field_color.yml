@@ -1,0 +1,25 @@
+uuid: b2055e4d-e662-4d46-b06f-aec699666031
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color
+    - node.type.drupalsite
+  module:
+    - color_field
+id: node.drupalsite.field_color
+field_name: field_color
+entity_type: node
+bundle: drupalsite
+label: Цвет
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    color: '#dedede'
+    opacity: '0'
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

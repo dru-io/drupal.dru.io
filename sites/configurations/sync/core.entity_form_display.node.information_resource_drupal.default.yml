@@ -1,0 +1,75 @@
+uuid: 4be38fe4-2d45-46b6-89e2-79fbe2ea5ddb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.information_resource_drupal.body
+    - field.field.node.information_resource_drupal.field_link
+    - field.field.node.information_resource_drupal.field_logo
+    - image.style.thumbnail
+    - node.type.information_resource_drupal
+  module:
+    - image
+    - path
+    - text
+id: node.information_resource_drupal.default
+targetEntityType: node
+bundle: information_resource_drupal
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_logo:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  sticky: true
+  uid: true

@@ -1,0 +1,13 @@
+uuid: 514d68f5-fdf4-40d1-aec7-5ccb387a6eb4
+langcode: ru
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: SPsUXsR3Rc8d1y3gewzaAKWa1ncea_ywXX3f7LTn7k0
+id: user_unblock_user_action
+label: 'Разблокировать выбранных пользователей'
+type: user
+plugin: user_unblock_user_action
+configuration: {  }

@@ -1,0 +1,7 @@
+uuid: eac36aae-82c9-4568-865e-50b347e034b3
+langcode: ru
+status: true
+dependencies: {  }
+id: text_and_video
+label: 'Текст и видео'
+behavior_plugins: {  }

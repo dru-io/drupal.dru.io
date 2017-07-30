@@ -1,0 +1,21 @@
+uuid: a7695cc8-a954-46de-aae7-7be45ceaadb8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_value
+    - paragraphs.paragraphs_type.achievement_paragraph
+  module:
+    - text
+id: paragraph.achievement_paragraph.field_value
+field_name: field_value
+entity_type: paragraph
+bundle: achievement_paragraph
+label: Значение
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

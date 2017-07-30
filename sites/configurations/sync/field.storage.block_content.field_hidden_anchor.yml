@@ -1,0 +1,20 @@
+uuid: 1a3d84a7-de6e-485a-9e07-5f66b5fb7b41
+langcode: ru
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_hidden_anchor
+field_name: field_hidden_anchor
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

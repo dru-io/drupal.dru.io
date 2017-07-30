@@ -1,0 +1,237 @@
+uuid: d3851e36-c0cd-49e3-af57-5b1ee7088157
+langcode: ru
+status: false
+dependencies:
+  enforced:
+    module:
+      - slick
+_core:
+  default_config_hash: Zyx4BsKtbNFnRU7WTHAF0DGHMenI0b_Czn4dwl1bQTc
+id: drupalsites
+name: drupalsites
+label: 'Сайты на Drupal'
+weight: -10
+group: ''
+skin: default
+breakpoints: 5
+optimized: false
+options:
+  options__active_tab: edit-options-responsives
+  settings:
+    mobileFirst: false
+    asNavFor: ''
+    accessibility: true
+    adaptiveHeight: false
+    autoplay: false
+    autoplaySpeed: 3000
+    pauseOnHover: true
+    pauseOnDotsHover: false
+    arrows: true
+    prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>'
+    nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>'
+    downArrow: false
+    downArrowTarget: ''
+    downArrowOffset: 0
+    centerMode: false
+    centerPadding: 50px
+    dots: false
+    dotsClass: slick-dots
+    appendDots: $(element)
+    draggable: true
+    fade: false
+    focusOnSelect: false
+    infinite: true
+    initialSlide: 0
+    lazyLoad: ondemand
+    mouseWheel: false
+    randomize: false
+    respondTo: window
+    rtl: false
+    rows: 1
+    slidesPerRow: 6
+    slide: ''
+    slidesToShow: 6
+    slidesToScroll: 1
+    speed: 500
+    swipe: true
+    swipeToSlide: true
+    edgeFriction: 0.35
+    touchMove: true
+    touchThreshold: 5
+    useCSS: true
+    cssEase: ease
+    cssEaseBezier: ''
+    cssEaseOverride: ''
+    useTransform: true
+    easing: linear
+    variableWidth: false
+    vertical: false
+    verticalSwiping: false
+    waitForAnimate: true
+  responsives:
+    responsive:
+      -
+        breakpoint: 1180
+        unslick: false
+        settings:
+          adaptiveHeight: false
+          autoplay: false
+          autoplaySpeed: 3000
+          pauseOnHover: false
+          pauseOnDotsHover: false
+          arrows: true
+          centerMode: false
+          centerPadding: 50px
+          dots: false
+          draggable: true
+          fade: false
+          focusOnSelect: false
+          infinite: true
+          initialSlide: 0
+          respondTo: window
+          rows: 1
+          slidesPerRow: 4
+          slidesToShow: 4
+          slidesToScroll: 1
+          speed: 500
+          swipe: true
+          swipeToSlide: true
+          edgeFriction: 0.35
+          touchMove: true
+          touchThreshold: 5
+          variableWidth: false
+          vertical: false
+          verticalSwiping: false
+          waitForAnimate: true
+      -
+        breakpoint: 980
+        unslick: false
+        settings:
+          adaptiveHeight: false
+          autoplay: false
+          autoplaySpeed: 3000
+          pauseOnHover: false
+          pauseOnDotsHover: false
+          arrows: true
+          centerMode: false
+          centerPadding: 50px
+          dots: false
+          draggable: true
+          fade: false
+          focusOnSelect: false
+          infinite: true
+          initialSlide: 0
+          respondTo: window
+          rows: 1
+          slidesPerRow: 3
+          slidesToShow: 3
+          slidesToScroll: 1
+          speed: 500
+          swipe: true
+          swipeToSlide: true
+          edgeFriction: 0.35
+          touchMove: true
+          touchThreshold: 5
+          variableWidth: false
+          vertical: false
+          verticalSwiping: false
+          waitForAnimate: true
+      -
+        breakpoint: 768
+        unslick: false
+        settings:
+          adaptiveHeight: false
+          autoplay: false
+          autoplaySpeed: 3000
+          pauseOnHover: false
+          pauseOnDotsHover: false
+          arrows: true
+          centerMode: false
+          centerPadding: 50px
+          dots: false
+          draggable: true
+          fade: false
+          focusOnSelect: false
+          infinite: true
+          initialSlide: 0
+          respondTo: window
+          rows: 1
+          slidesPerRow: 2
+          slidesToShow: 2
+          slidesToScroll: 1
+          speed: 500
+          swipe: true
+          swipeToSlide: true
+          edgeFriction: 0.35
+          touchMove: true
+          touchThreshold: 5
+          variableWidth: false
+          vertical: false
+          verticalSwiping: false
+          waitForAnimate: true
+      -
+        breakpoint: 480
+        unslick: false
+        settings:
+          adaptiveHeight: false
+          autoplay: false
+          autoplaySpeed: 3000
+          pauseOnHover: false
+          pauseOnDotsHover: false
+          arrows: true
+          centerMode: true
+          centerPadding: 30px
+          dots: false
+          draggable: true
+          fade: false
+          focusOnSelect: false
+          infinite: true
+          initialSlide: 0
+          respondTo: window
+          rows: 1
+          slidesPerRow: 1
+          slidesToShow: 1
+          slidesToScroll: 1
+          speed: 500
+          swipe: true
+          swipeToSlide: true
+          edgeFriction: 0.35
+          touchMove: true
+          touchThreshold: 5
+          variableWidth: false
+          vertical: false
+          verticalSwiping: false
+          waitForAnimate: true
+      -
+        breakpoint: 99999
+        unslick: false
+        settings:
+          adaptiveHeight: false
+          autoplay: false
+          autoplaySpeed: 3000
+          pauseOnHover: false
+          pauseOnDotsHover: false
+          arrows: true
+          centerMode: false
+          centerPadding: 50px
+          dots: false
+          draggable: true
+          fade: false
+          focusOnSelect: false
+          infinite: true
+          initialSlide: 0
+          respondTo: window
+          rows: 1
+          slidesPerRow: 5
+          slidesToShow: 5
+          slidesToScroll: 1
+          speed: 500
+          swipe: true
+          swipeToSlide: true
+          edgeFriction: 0.35
+          touchMove: true
+          touchThreshold: 5
+          variableWidth: false
+          vertical: false
+          verticalSwiping: false
+          waitForAnimate: true

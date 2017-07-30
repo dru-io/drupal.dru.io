@@ -1,0 +1,25 @@
+uuid: 3521b021-5384-4b71-a5c4-beccaf676f54
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.user_protection.body
+    - node.type.user_protection
+  module:
+    - text
+    - user
+id: node.user_protection.default
+targetEntityType: node
+bundle: user_protection
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  links: true

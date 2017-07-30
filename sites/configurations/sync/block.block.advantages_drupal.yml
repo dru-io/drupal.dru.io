@@ -1,0 +1,30 @@
+uuid: 35309ca3-098b-428c-953f-3188938a7f02
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.advantages_drupal
+  module:
+    - system
+    - views
+  theme:
+    - classier
+id: advantages_drupal
+theme: classier
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:advantages_drupal-block_1'
+settings:
+  id: 'views_block:advantages_drupal-block_1'
+  label: 'Преимущества Drupal'
+  provider: views
+  label_display: visible
+  views_label: 'Преимущества Drupal'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

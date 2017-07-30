@@ -1,0 +1,22 @@
+uuid: 96a9cc80-b88e-4ddb-911c-e925cfc0a109
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraph_block
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.paragraph_block.body
+field_name: body
+entity_type: block_content
+bundle: paragraph_block
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

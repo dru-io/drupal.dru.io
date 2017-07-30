@@ -1,0 +1,76 @@
+uuid: 2f88b184-3b62-43a0-bd3a-454d25de53f0
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_and_webform.field_body
+    - field.field.paragraph.text_and_webform.field_subtitle
+    - field.field.paragraph.text_and_webform.field_webform
+    - paragraphs.paragraphs_type.text_and_webform
+  module:
+    - field_group
+    - text
+    - webform
+third_party_settings:
+  field_group:
+    group_left_side:
+      children:
+        - field_subtitle
+        - field_body
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: leftside
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Левая сторона'
+    group_right_side:
+      children:
+        - field_webform
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: rightside
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Правая сторона'
+id: paragraph.text_and_webform.default
+targetEntityType: paragraph
+bundle: text_and_webform
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_webform:
+    weight: 4
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden: {  }

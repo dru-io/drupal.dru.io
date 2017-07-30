@@ -1,0 +1,17 @@
+uuid: ac50dc73-92e5-46d5-b947-23960dec465c
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Ошибка
+type: error
+description: 'Для страниц "403", "404"'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,8 @@
+uuid: dbf4cc3c-5455-4201-9830-eb3c11511996
+langcode: ru
+status: true
+dependencies: {  }
+id: main-menu-inner-page
+label: 'Основная навигация внутренних страниц'
+description: ''
+locked: false

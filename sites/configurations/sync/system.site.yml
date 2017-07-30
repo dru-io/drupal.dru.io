@@ -1,0 +1,14 @@
+uuid: 42708244-1b06-478f-87dd-639b1f8c0c98
+name: Drupal
+mail: info@clipsite.ru
+slogan: 'Популярная CMS/CMF система для проектов любой сложности'
+page:
+  403: /node/37
+  404: /node/36
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: ru
+default_langcode: ru
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

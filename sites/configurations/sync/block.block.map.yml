@@ -1,0 +1,30 @@
+uuid: 3df2a505-530f-4f2c-85c7-efd089c3f6d6
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.karta
+  module:
+    - system
+    - views
+  theme:
+    - classier
+id: map
+theme: classier
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:karta-block_map'
+settings:
+  id: 'views_block:karta-block_map'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

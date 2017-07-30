@@ -1,0 +1,42 @@
+uuid: 3488f642-259f-4197-9c50-7aa546248359
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraph_block
+    - field.field.block_content.paragraph_block.body
+    - field.field.block_content.paragraph_block.field_hidden_anchor
+    - field.field.block_content.paragraph_block.field_paragraph
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.paragraph_block.default
+targetEntityType: block_content
+bundle: paragraph_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hidden_anchor:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

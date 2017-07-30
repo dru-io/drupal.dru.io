@@ -1,0 +1,47 @@
+uuid: dfab85c4-10fc-47b6-864a-a89b5aaa1f15
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.branding.field_link
+    - field.field.paragraph.branding.field_logo
+    - field.field.paragraph.branding.field_sitename
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.branding
+  module:
+    - image
+    - link
+    - text
+id: paragraph.branding.default
+targetEntityType: paragraph
+bundle: branding
+mode: default
+content:
+  field_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_logo:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_sitename:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

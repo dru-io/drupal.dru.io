@@ -1,0 +1,7 @@
+uuid: 048f1923-bb21-4060-ae49-c4d5aeca0073
+langcode: ru
+status: true
+dependencies: {  }
+id: achievement_paragraph
+label: 'Карточка - достижение'
+behavior_plugins: {  }

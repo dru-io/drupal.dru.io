@@ -1,0 +1,9 @@
+uuid: cbb21909-3349-403d-88d4-8d6a08a3a229
+langcode: ru
+status: true
+dependencies: {  }
+id: ru
+label: Russian
+direction: ltr
+weight: 0
+locked: false

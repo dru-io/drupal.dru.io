@@ -1,0 +1,20 @@
+uuid: 2e879608-5f0a-4a28-8a21-f391ab8b491e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - promo
+  theme:
+    - classier
+id: askaquestion
+theme: classier
+region: content
+weight: 3
+provider: null
+plugin: promo_ask_block_conditional
+settings:
+  id: promo_ask_block_conditional
+  label: 'Ask a question'
+  provider: promo
+  label_display: '0'
+visibility: {  }

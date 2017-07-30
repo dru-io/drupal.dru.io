@@ -1,0 +1,29 @@
+uuid: e37adddb-1e12-47e4-8a51-b27ff5f576ec
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.drupalsite.body
+    - node.type.drupalsite
+  module:
+    - text
+    - user
+id: node.drupalsite.teaser
+targetEntityType: node
+bundle: drupalsite
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

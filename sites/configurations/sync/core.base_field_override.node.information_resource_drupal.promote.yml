@@ -1,0 +1,22 @@
+uuid: 08ee40e6-cd0b-406a-9aac-db9de9cb0fbb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.information_resource_drupal
+id: node.information_resource_drupal.promote
+field_name: promote
+entity_type: node
+bundle: information_resource_drupal
+label: 'Помещено на главную страницу'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

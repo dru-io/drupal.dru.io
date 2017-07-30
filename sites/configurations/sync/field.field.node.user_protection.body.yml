@@ -1,0 +1,22 @@
+uuid: 1d73e4de-7873-431c-8511-1324f61d8562
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.user_protection
+  module:
+    - text
+id: node.user_protection.body
+field_name: body
+entity_type: node
+bundle: user_protection
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

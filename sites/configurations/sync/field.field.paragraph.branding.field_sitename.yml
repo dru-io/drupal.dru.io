@@ -1,0 +1,21 @@
+uuid: 017e46b3-5981-4755-9256-5a9044347d1e
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sitename
+    - paragraphs.paragraphs_type.branding
+  module:
+    - text
+id: paragraph.branding.field_sitename
+field_name: field_sitename
+entity_type: paragraph
+bundle: branding
+label: 'Название сайта'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

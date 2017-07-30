@@ -1,0 +1,31 @@
+uuid: 7b1ae868-013e-43af-8ca1-0c8330cd0e92
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:paragraph_block:5950b6df-37f0-4900-9329-0b958e6c58c2'
+  module:
+    - block_content
+    - system
+  theme:
+    - classier
+id: achievements
+theme: classier
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:5950b6df-37f0-4900-9329-0b958e6c58c2'
+settings:
+  id: 'block_content:5950b6df-37f0-4900-9329-0b958e6c58c2'
+  label: 'Достижения drupal'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

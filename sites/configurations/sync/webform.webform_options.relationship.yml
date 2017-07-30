@@ -1,0 +1,13 @@
+uuid: babc5f64-9929-4db4-b8c8-8f301e493f4f
+langcode: ru
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 1tjuxzCXZDkEBFhEqaLYf5oZLAiT3CILYg_gEHNGwF0
+id: relationship
+label: Relationship
+category: Demographic
+options: "Parent: Parent\n'Significant Other': 'Significant Other'\nSibling: Sibling\nChild: Child\nFriend: Friend\n"

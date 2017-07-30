@@ -1,0 +1,25 @@
+uuid: 03a2345c-8434-4fea-9407-1b21324a33c2
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:44913348-f88e-4ed1-888a-c89040465aa9'
+  module:
+    - block_content
+  theme:
+    - classier
+id: copyright_feedback
+theme: classier
+region: copyright
+weight: -3
+provider: null
+plugin: 'block_content:44913348-f88e-4ed1-888a-c89040465aa9'
+settings:
+  id: 'block_content:44913348-f88e-4ed1-888a-c89040465aa9'
+  label: 'Email для связи'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

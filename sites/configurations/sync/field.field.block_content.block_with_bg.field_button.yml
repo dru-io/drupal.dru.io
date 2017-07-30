@@ -1,0 +1,23 @@
+uuid: 0e1a7b79-48bf-4c53-9006-2d60f75a8002
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_bg
+    - field.storage.block_content.field_button
+  module:
+    - link
+id: block_content.block_with_bg.field_button
+field_name: field_button
+entity_type: block_content
+bundle: block_with_bg
+label: Кнопка
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

@@ -1,0 +1,22 @@
+uuid: 9edb8a7f-2d85-4409-be19-2deab011e1c6
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - classier
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: classier_messages
+theme: classier
+region: featured
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Сообщения статуса'
+  provider: system
+  label_display: '0'
+visibility: {  }

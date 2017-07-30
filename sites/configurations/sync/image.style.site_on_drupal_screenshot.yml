@@ -1,0 +1,14 @@
+uuid: 26f57b3c-7336-457e-a3d2-1bffef988f6f
+langcode: ru
+status: true
+dependencies: {  }
+name: site_on_drupal_screenshot
+label: 'Site on Drupal screenshot'
+effects:
+  07c97b59-bf37-409d-948d-ebcf30ff6cf1:
+    uuid: 07c97b59-bf37-409d-948d-ebcf30ff6cf1
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 217
+      height: 126

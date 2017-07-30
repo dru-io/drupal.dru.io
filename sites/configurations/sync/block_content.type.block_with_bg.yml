@@ -1,0 +1,8 @@
+uuid: b14c2423-5460-41a4-b629-32464837ae60
+langcode: ru
+status: true
+dependencies: {  }
+id: block_with_bg
+label: 'Блок с фоновым изображением'
+revision: 0
+description: 'Блок с фоновым изображением содержит заголовок, тело, фоновое изображение и кнопку.'

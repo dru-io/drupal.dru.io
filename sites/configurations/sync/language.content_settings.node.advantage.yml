@@ -1,0 +1,11 @@
+uuid: 33a8e603-3f41-4a70-ad1d-c54c007c9645
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.advantage
+id: node.advantage
+target_entity_type_id: node
+target_bundle: advantage
+default_langcode: site_default
+language_alterable: false

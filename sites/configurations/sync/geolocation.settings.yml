@@ -1,0 +1,10 @@
+google_map_api_key: AIzaSyDOzY_QDawoytchIZAw1A_X8dYIbzOCNuM
+google_map_custom_url_parameters:
+  libraries: {  }
+  region: ''
+  language: ru
+  v: ''
+  client: ''
+_core:
+  default_config_hash: wNpilbhustdj8tLBsYJ6GPdxS5lUKU5rRei_XxSyd3A
+langcode: ru

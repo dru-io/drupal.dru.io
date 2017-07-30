@@ -1,0 +1,31 @@
+uuid: ff82e4c7-69ab-4389-b8c2-b47c26e2556a
+langcode: ru
+status: false
+dependencies:
+  content:
+    - 'block_content:paragraph_block:d769a4a6-cda4-4f2a-8926-c2f8e1868b64'
+  module:
+    - block_content
+    - system
+  theme:
+    - classier
+id: ask_a_question
+theme: classier
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:d769a4a6-cda4-4f2a-8926-c2f8e1868b64'
+settings:
+  id: 'block_content:d769a4a6-cda4-4f2a-8926-c2f8e1868b64'
+  label: 'Задать вопрос'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

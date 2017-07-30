@@ -1,0 +1,43 @@
+uuid: 761c9c5e-40c6-4010-89bb-e2affaffd20b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_and_video.field_body
+    - field.field.paragraph.text_and_video.field_subtitle
+    - field.field.paragraph.text_and_video.field_youtube
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - text
+    - youtube
+id: paragraph.text_and_video.default
+targetEntityType: paragraph
+bundle: text_and_video
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_subtitle:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_youtube:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: youtube
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

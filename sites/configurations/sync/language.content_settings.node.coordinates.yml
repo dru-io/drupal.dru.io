@@ -1,0 +1,11 @@
+uuid: 852252c4-e7db-4044-92ba-9d722c1aaa07
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.coordinates
+id: node.coordinates
+target_entity_type_id: node
+target_bundle: coordinates
+default_langcode: site_default
+language_alterable: false

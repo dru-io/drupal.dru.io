@@ -1,0 +1,21 @@
+uuid: 215592a6-104c-4be1-81b9-328316483301
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.text_and_webform
+  module:
+    - text
+id: paragraph.text_and_webform.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: text_and_webform
+label: Текст
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

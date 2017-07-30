@@ -1,0 +1,30 @@
+uuid: e47fd8d6-cfff-4c0e-8959-7b83cc081071
+langcode: ru
+status: true
+dependencies:
+  module:
+    - node
+id: basic_page
+label: 'Основная страница'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  779582db-86a1-4863-b518-4da533935fbf:
+    id: node_type
+    bundles:
+      user_protection: user_protection
+      advantage: advantage
+      article: article
+      coordinates: coordinates
+      drupalsite: drupalsite
+      error: error
+      information_resource_drupal: information_resource_drupal
+      page: page
+      thanks: thanks
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 779582db-86a1-4863-b518-4da533935fbf
+selection_logic: and
+weight: -5
+relationships: {  }

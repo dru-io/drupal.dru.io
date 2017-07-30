@@ -1,0 +1,31 @@
+uuid: 40ccf2e4-2938-4551-9cea-603269371205
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:block_with_bg:4700ac37-5f98-4996-ae83-917bb5a58903'
+  module:
+    - block_content
+    - system
+  theme:
+    - classier
+id: why_drupal
+theme: classier
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:4700ac37-5f98-4996-ae83-917bb5a58903'
+settings:
+  id: 'block_content:4700ac37-5f98-4996-ae83-917bb5a58903'
+  label: 'Почему мы выбираем Drupal'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,7 @@
+uuid: 8ef559c2-dbc6-4539-b2d3-88d7fd49fbd9
+langcode: ru
+status: true
+dependencies: {  }
+id: text_and_webform
+label: 'Текст и вебформа'
+behavior_plugins: {  }

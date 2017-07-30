@@ -1,0 +1,47 @@
+uuid: 6195b450-5803-48ab-97a9-79d45846a7b9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.branding.field_link
+    - field.field.paragraph.branding.field_logo
+    - field.field.paragraph.branding.field_sitename
+    - paragraphs.paragraphs_type.branding
+  module:
+    - image
+    - link
+    - text
+id: paragraph.branding.default
+targetEntityType: paragraph
+bundle: branding
+mode: default
+content:
+  field_link:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_logo:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_sitename:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

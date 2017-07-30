@@ -1,0 +1,15 @@
+uuid: daff1a8a-ea3d-4bd0-9ea1-5d63839578c1
+langcode: ru
+status: true
+dependencies: {  }
+name: information_drupal_resource_logo
+label: 'Information Drupal Resource Logo'
+effects:
+  3d909037-94ca-4d19-8bcc-6b33e488cf88:
+    uuid: 3d909037-94ca-4d19-8bcc-6b33e488cf88
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: null
+      upscale: false

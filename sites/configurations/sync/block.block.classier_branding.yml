@@ -1,0 +1,25 @@
+uuid: 0c1b27f5-4154-44c7-8afa-7f25165cf522
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - classier
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: classier_branding
+theme: classier
+region: footer
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Брендинг сайта'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

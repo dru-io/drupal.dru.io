@@ -1,0 +1,19 @@
+uuid: 210c9482-6005-4ac8-af94-e3373e9b0b60
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.information_resource_drupal
+id: node.information_resource_drupal.field_link
+field_name: field_link
+entity_type: node
+bundle: information_resource_drupal
+label: 'Ссылка на сайт ресурса'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

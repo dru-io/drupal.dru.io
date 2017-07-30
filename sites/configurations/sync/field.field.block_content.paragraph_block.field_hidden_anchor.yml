@@ -1,0 +1,24 @@
+uuid: 02aeb867-bb91-40f6-880a-1c8f03a1d8cb
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraph_block
+    - field.storage.block_content.field_hidden_anchor
+  module:
+    - text
+id: block_content.paragraph_block.field_hidden_anchor
+field_name: field_hidden_anchor
+entity_type: block_content
+bundle: paragraph_block
+label: 'Скрытый якорь'
+description: 'На этот якорь будет ввести ссылка в меню "Основная навигация".'
+required: false
+translatable: false
+default_value:
+  -
+    value: '<a name="" id="">А</a>'
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text

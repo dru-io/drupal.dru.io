@@ -1,0 +1,30 @@
+uuid: cb40c5e1-9a6c-4bfc-aa60-8e80de3cc630
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.information_resource_drupal
+  module:
+    - system
+    - views
+  theme:
+    - classier
+id: information_resource
+theme: classier
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:information_resource_drupal-block_resource'
+settings:
+  id: 'views_block:information_resource_drupal-block_resource'
+  label: 'Информационные ресурсы drupal'
+  provider: views
+  label_display: '0'
+  views_label: 'Информационные ресурсы drupal'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

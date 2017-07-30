@@ -1,0 +1,25 @@
+uuid: b3169028-db9a-441a-880a-bc4f5d64fbed
+langcode: ru
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:ac77912c-462c-4eab-b791-3b3b4bd6e8ef'
+  module:
+    - block_content
+  theme:
+    - classier
+id: brandingblock
+theme: classier
+region: upper_header
+weight: -8
+provider: null
+plugin: 'block_content:ac77912c-462c-4eab-b791-3b3b4bd6e8ef'
+settings:
+  id: 'block_content:ac77912c-462c-4eab-b791-3b3b4bd6e8ef'
+  label: 'Branding Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

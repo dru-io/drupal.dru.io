@@ -1,0 +1,29 @@
+uuid: 1e714620-efb1-4ef3-bcad-f59e1ce715e5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.information_resource_drupal.body
+    - node.type.information_resource_drupal
+  module:
+    - text
+    - user
+id: node.information_resource_drupal.teaser
+targetEntityType: node
+bundle: information_resource_drupal
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

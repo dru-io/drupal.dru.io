@@ -1,0 +1,19 @@
+uuid: 70ce092b-40dd-4857-b7c4-c8701a73b869
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_comparison
+    - paragraphs.paragraphs_type.achievement_paragraph
+id: paragraph.achievement_paragraph.field_comparison
+field_name: field_comparison
+entity_type: paragraph
+bundle: achievement_paragraph
+label: Сравнение
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

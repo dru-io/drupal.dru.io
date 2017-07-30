@@ -1,0 +1,25 @@
+uuid: 6c24bb3e-ec3c-449d-8a5b-fcf198bc5084
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3b780d24-b4bb-4724-9a4b-d68dd7276021'
+  module:
+    - block_content
+  theme:
+    - classier
+id: footer_sign
+theme: classier
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:3b780d24-b4bb-4724-9a4b-d68dd7276021'
+settings:
+  id: 'block_content:3b780d24-b4bb-4724-9a4b-d68dd7276021'
+  label: 'Создано русскоязычным сообществом Drupal, при поддержке РаДон, Клипсайт, i20biz'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

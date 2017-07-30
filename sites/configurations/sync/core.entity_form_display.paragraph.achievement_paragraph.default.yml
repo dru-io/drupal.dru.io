@@ -1,0 +1,44 @@
+uuid: 67d5bd8f-468d-4e8c-b916-f9b8c61fe5ce
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.achievement_paragraph.field_comparison
+    - field.field.paragraph.achievement_paragraph.field_sign
+    - field.field.paragraph.achievement_paragraph.field_value
+    - paragraphs.paragraphs_type.achievement_paragraph
+  module:
+    - text
+id: paragraph.achievement_paragraph.default
+targetEntityType: paragraph
+bundle: achievement_paragraph
+mode: default
+content:
+  field_comparison:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sign:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,22 @@
+uuid: 48d5ec5c-6c11-43e5-9c0b-0a9af624dafd
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.error
+  module:
+    - text
+id: node.error.body
+field_name: body
+entity_type: node
+bundle: error
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

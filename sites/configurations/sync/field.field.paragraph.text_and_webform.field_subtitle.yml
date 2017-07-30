@@ -1,0 +1,21 @@
+uuid: c917511d-5ac2-41b8-8ee6-4ad4c413c3ab
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.text_and_webform
+  module:
+    - text
+id: paragraph.text_and_webform.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: text_and_webform
+label: Подзаголовок
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

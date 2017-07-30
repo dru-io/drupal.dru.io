@@ -1,0 +1,22 @@
+uuid: 9d0e867f-3ec4-4467-aaa5-bed58335bef4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.advantage
+id: node.advantage.promote
+field_name: promote
+entity_type: node
+bundle: advantage
+label: 'Помещено на главную страницу'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

@@ -1,0 +1,29 @@
+uuid: c916067c-befc-4f3c-90c7-80cd06918d7a
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.advantage.body
+    - node.type.advantage
+  module:
+    - text
+    - user
+id: node.advantage.teaser
+targetEntityType: node
+bundle: advantage
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

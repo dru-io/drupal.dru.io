@@ -1,0 +1,43 @@
+uuid: cba73745-743f-41cc-8989-c3b90b572446
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_and_webform.field_body
+    - field.field.paragraph.text_and_webform.field_subtitle
+    - field.field.paragraph.text_and_webform.field_webform
+    - paragraphs.paragraphs_type.text_and_webform
+  module:
+    - text
+    - webform
+id: paragraph.text_and_webform.default
+targetEntityType: paragraph
+bundle: text_and_webform
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_subtitle:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_webform:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,11 @@
+uuid: abff1482-7991-4eb1-aa8d-ad802e4d980d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.information_resource_drupal
+id: node.information_resource_drupal
+target_entity_type_id: node
+target_bundle: information_resource_drupal
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,45 @@
+uuid: c3e21df0-19a2-497c-9391-4442954f0c55
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.paragraph_block
+    - field.storage.block_content.field_paragraph
+    - paragraphs.paragraphs_type.achievement_paragraph
+    - paragraphs.paragraphs_type.branding
+    - paragraphs.paragraphs_type.text_and_video
+    - paragraphs.paragraphs_type.text_and_webform
+  module:
+    - entity_reference_revisions
+id: block_content.paragraph_block.field_paragraph
+field_name: field_paragraph
+entity_type: block_content
+bundle: paragraph_block
+label: Параграф
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      achievement_paragraph: achievement_paragraph
+      branding: branding
+      text_and_video: text_and_video
+      text_and_webform: text_and_webform
+    target_bundles_drag_drop:
+      achievement_paragraph:
+        enabled: true
+        weight: 5
+      branding:
+        enabled: true
+        weight: 6
+      text_and_video:
+        enabled: true
+        weight: 7
+      text_and_webform:
+        enabled: true
+        weight: 8
+field_type: entity_reference_revisions

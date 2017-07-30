@@ -1,0 +1,110 @@
+uuid: f35c133e-9f22-467e-b187-e970e81d6b1d
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_bg
+    - field.field.block_content.block_with_bg.body
+    - field.field.block_content.block_with_bg.field_background
+    - field.field.block_content.block_with_bg.field_button
+    - field.field.block_content.block_with_bg.field_hidden_anchor
+    - field.field.block_content.block_with_bg.field_title
+  module:
+    - blazy
+    - link
+    - text
+id: block_content.block_with_bg.default
+targetEntityType: block_content
+bundle: block_with_bg
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_background:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      thumbnail_style: ''
+      media_switch: ''
+      background: true
+      ratio: ''
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: default
+      caption:
+        title: '0'
+        alt: '0'
+      iframe_lazy: true
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      optionset: default
+      skin: ''
+      style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      grid: 0
+      grid_header: ''
+      grid_medium: 0
+      grid_small: 0
+    third_party_settings: {  }
+    type: blazy
+    region: content
+  field_button:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_hidden_anchor:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  langcode: true

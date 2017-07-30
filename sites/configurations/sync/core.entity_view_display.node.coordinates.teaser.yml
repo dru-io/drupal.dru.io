@@ -1,0 +1,21 @@
+uuid: 08b3202b-b4e9-4089-888b-831a22f53333
+langcode: ru
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coordinates.field_coordinates
+    - node.type.coordinates
+  module:
+    - user
+id: node.coordinates.teaser
+targetEntityType: node
+bundle: coordinates
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_coordinates: true
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: bf16d287-9107-4348-9e7a-1f14c8dceee5
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.user_protection
+id: node.user_protection
+target_entity_type_id: node
+target_bundle: user_protection
+default_langcode: site_default
+language_alterable: false

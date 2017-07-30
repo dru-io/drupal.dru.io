@@ -1,0 +1,15 @@
+uuid: 01155f93-260a-488f-a023-e1c3c40af54d
+langcode: ru
+status: true
+dependencies: {  }
+name: site_on_drupal_logo
+label: 'Site on Drupal logo'
+effects:
+  e76ed857-28f9-4b60-a4fc-95d0d2a31513:
+    uuid: e76ed857-28f9-4b60-a4fc-95d0d2a31513
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 50
+      upscale: false

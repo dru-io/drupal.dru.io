@@ -1,0 +1,21 @@
+uuid: 973a90ba-fcb3-4bca-bb57-893c7302fabe
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_youtube
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - youtube
+id: paragraph.text_and_video.field_youtube
+field_name: field_youtube
+entity_type: paragraph
+bundle: text_and_video
+label: Видео
+description: YouTube
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: youtube

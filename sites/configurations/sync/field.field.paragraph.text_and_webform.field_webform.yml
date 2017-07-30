@@ -1,0 +1,36 @@
+uuid: cce013ce-9b01-490e-a2b7-fd8222cc59b8
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform
+    - paragraphs.paragraphs_type.text_and_webform
+    - webform.webform.ask_a_question
+  module:
+    - webform
+id: paragraph.text_and_webform.field_webform
+field_name: field_webform
+entity_type: paragraph
+bundle: text_and_webform
+label: Вебформа
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    target_uuid: 26fe5f78-83ea-4ec0-99a5-abe17408a8ed
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: open
+  open: ''
+  close: ''
+field_type: webform

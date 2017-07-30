@@ -1,0 +1,25 @@
+uuid: def02e88-263b-4009-b99f-8be0f2a77308
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:paragraph_block:2392d485-e57b-4062-a217-77f9627650f1'
+  module:
+    - block_content
+  theme:
+    - classier
+id: branding_paragraph
+theme: classier
+region: upper_header
+weight: -11
+provider: null
+plugin: 'block_content:2392d485-e57b-4062-a217-77f9627650f1'
+settings:
+  id: 'block_content:2392d485-e57b-4062-a217-77f9627650f1'
+  label: 'Branding Paragraph'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

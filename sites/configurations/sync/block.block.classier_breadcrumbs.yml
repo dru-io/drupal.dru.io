@@ -1,0 +1,27 @@
+uuid: 67459147-97ef-49ff-bc78-2f6f2d1b2b9b
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - classier
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: classier_breadcrumbs
+theme: classier
+region: content
+weight: -10
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Строка навигации'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: ''
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,21 @@
+uuid: 974ae14b-8826-49e5-b2f7-34baa05911db
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coordinates
+    - node.type.coordinates
+  module:
+    - geolocation
+id: node.coordinates.field_coordinates
+field_name: field_coordinates
+entity_type: node
+bundle: coordinates
+label: Координаты
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

@@ -1,0 +1,17 @@
+uuid: 5a7e8a95-a03b-4584-a803-53e5b7a51cda
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Сайт на Drupal'
+type: drupalsite
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

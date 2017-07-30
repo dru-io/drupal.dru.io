@@ -1,0 +1,31 @@
+uuid: 1d3306b7-2025-4de8-8401-8bf596687a31
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:block_with_bg:f6175be6-afe6-4d1b-b416-972ba6716951'
+  module:
+    - block_content
+    - system
+  theme:
+    - classier
+id: support
+theme: classier
+region: content
+weight: -1
+provider: null
+plugin: 'block_content:f6175be6-afe6-4d1b-b416-972ba6716951'
+settings:
+  id: 'block_content:f6175be6-afe6-4d1b-b416-972ba6716951'
+  label: 'Drupal разрабатывается и поддерживается'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

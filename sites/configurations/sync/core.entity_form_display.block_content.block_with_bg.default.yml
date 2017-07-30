@@ -1,0 +1,77 @@
+uuid: 0d173312-ff33-4b0c-8414-1f48bbc75141
+langcode: ru
+status: true
+dependencies:
+  config:
+    - block_content.type.block_with_bg
+    - field.field.block_content.block_with_bg.body
+    - field.field.block_content.block_with_bg.field_background
+    - field.field.block_content.block_with_bg.field_button
+    - field.field.block_content.block_with_bg.field_hidden_anchor
+    - field.field.block_content.block_with_bg.field_title
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - text
+id: block_content.block_with_bg.default
+targetEntityType: block_content
+bundle: block_with_bg
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_background:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_button:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_hidden_anchor:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: 'Форматируемый заголовок блока'
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

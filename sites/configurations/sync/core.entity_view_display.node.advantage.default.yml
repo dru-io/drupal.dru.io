@@ -1,0 +1,36 @@
+uuid: 4ab4eb02-2c97-473b-a56c-4c62bbe16513
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.advantage.body
+    - field.field.node.advantage.field_image
+    - node.type.advantage
+  module:
+    - image
+    - text
+    - user
+id: node.advantage.default
+targetEntityType: node
+bundle: advantage
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  langcode: true
+  links: true

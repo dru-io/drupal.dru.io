@@ -1,0 +1,38 @@
+uuid: 3e8cd0c1-36a2-403c-a7fb-8959bb740d51
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.information_resource_drupal.body
+    - field.field.node.information_resource_drupal.field_link
+    - field.field.node.information_resource_drupal.field_logo
+    - node.type.information_resource_drupal
+  module:
+    - image
+    - text
+    - user
+id: node.information_resource_drupal.default
+targetEntityType: node
+bundle: information_resource_drupal
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_link: true
+  langcode: true
+  links: true

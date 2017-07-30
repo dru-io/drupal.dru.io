@@ -1,0 +1,20 @@
+uuid: 936c5fab-4614-495f-b8c1-9e30dfb9e0eb
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b-qxCu1VLGWjqvXKv4Nt7y2BUo5VSGpEIj8gb6C_PUY
+id: global
+label: Global
+tags:
+  description: 'Что такое CMS Drupal и какие преимущества использования данной системы? Примеры сайтов, полезные ссылки и подробное объяснение.'
+  keywords: 'drupal, друпал, что такое друпал, CMS Drupal'
+  title: 'Почему мы выбираем Drupal'
+  og_description: 'Почему мы выбираем Drupal как платформу для разработки сайтов и сервисов'
+  og_image: 'http://drupal.dru.io/themes/classier/images/drupromo_og.jpg'
+  og_image_url: 'http://drupal.dru.io/themes/classier/images'
+  og_locale: ru_RU
+  og_site_name: 'Почему Drupal'
+  og_title: 'Почему Drupal'
+  og_type: website
+  og_url: 'http://drupal.dru.io'

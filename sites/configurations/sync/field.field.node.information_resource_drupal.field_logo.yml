@@ -1,0 +1,38 @@
+uuid: 8f5d1947-663c-4aff-8742-96bca21e341b
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo
+    - node.type.information_resource_drupal
+  module:
+    - image
+id: node.information_resource_drupal.field_logo
+field_name: field_logo
+entity_type: node
+bundle: information_resource_drupal
+label: Логотип
+description: 'Логотип информационного ресурса drupal'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '500 kb'
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: 871d5f54-94ac-46c6-93d1-bc24f815eb8e
+    alt: ''
+    title: ''
+    width: 68
+    height: 79
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

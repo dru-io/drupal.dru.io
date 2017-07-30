@@ -1,0 +1,31 @@
+uuid: 096ec947-6768-427a-a321-09b4e6947107
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:paragraph_block:022eb668-2f38-41ec-afd2-0ca0777b4f90'
+  module:
+    - block_content
+    - system
+  theme:
+    - classier
+id: what_is_drupal
+theme: classier
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:022eb668-2f38-41ec-afd2-0ca0777b4f90'
+settings:
+  id: 'block_content:022eb668-2f38-41ec-afd2-0ca0777b4f90'
+  label: 'Что такое Drupal?'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

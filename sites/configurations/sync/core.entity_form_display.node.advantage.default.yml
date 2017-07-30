@@ -1,0 +1,54 @@
+uuid: 771f1aed-8959-424f-b74d-ac04d39c3586
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.advantage.body
+    - field.field.node.advantage.field_image
+    - image.style.thumbnail
+    - node.type.advantage
+  module:
+    - image
+    - text
+id: node.advantage.default
+targetEntityType: node
+bundle: advantage
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

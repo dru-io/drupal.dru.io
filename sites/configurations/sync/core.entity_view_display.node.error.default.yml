@@ -1,0 +1,25 @@
+uuid: 5da83880-76d7-4c0b-b416-f3e69b849867
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.error.body
+    - node.type.error
+  module:
+    - text
+    - user
+id: node.error.default
+targetEntityType: node
+bundle: error
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
+  links: true

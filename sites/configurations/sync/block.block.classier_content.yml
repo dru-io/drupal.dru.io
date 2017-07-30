@@ -1,0 +1,27 @@
+uuid: f47ae2a5-3af2-4abe-8554-2e7554f7bf68
+langcode: ru
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - classier
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: classier_content
+theme: classier
+region: content
+weight: -9
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Содержимое страницы'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -1,0 +1,132 @@
+uuid: 26fe5f78-83ea-4ec0-99a5-abe17408a8ed
+langcode: ru
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: ask_a_question
+title: 'Задать вопрос'
+description: ''
+category: ''
+elements: "name:\n  '#type': textfield\n  '#title': 'Ваше имя'\n  '#title_display': invisible\n  '#placeholder': 'Ваше имя'\ne_mail:\n  '#type': email\n  '#title': 'Ваш e-mail'\n  '#title_display': invisible\n  '#placeholder': 'Ваш e-mail'\n  '#required': true\nquestion:\n  '#type': textarea\n  '#title': 'Ваш вопрос'\n  '#title_display': invisible\n  '#placeholder': 'Ваш вопрос'\n  '#required': true\nwebform_button:\n  '#type': webform_actions\n  '#title': Кнопка\n  '#submit__label': Отправить\n  '#submit__attributes':\n    style: webform-btn\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: info@clipsite.ru
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: 'Заполнена заявка [webform:title]'
+      body: "<p><strong>Заполнена заявка на сайте &quot;</strong>[webform:title]<strong>&quot;</strong></p>\n\n<p>Заполнено [webform_submission:created]</p>\n\n<p>Информация об отправителе:<br />\nИмя: [webform_submission:values:name]<br />\nE-mail: [webform_submission:values:e_mail]<br />\nВопрос: [webform_submission:values:question]</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''

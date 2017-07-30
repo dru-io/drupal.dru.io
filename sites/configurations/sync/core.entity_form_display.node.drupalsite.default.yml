@@ -1,0 +1,79 @@
+uuid: bce70fa1-e610-4fcf-a885-13c8ac4c9428
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.drupalsite.body
+    - field.field.node.drupalsite.field_color
+    - field.field.node.drupalsite.field_logo
+    - field.field.node.drupalsite.field_sitescreen
+    - image.style.thumbnail
+    - node.type.drupalsite
+  module:
+    - color_field
+    - image
+    - path
+    - text
+id: node.drupalsite.default
+targetEntityType: node
+bundle: drupalsite
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_color:
+    weight: 26
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+    type: color_field_widget_default
+    region: content
+  field_logo:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_sitescreen:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

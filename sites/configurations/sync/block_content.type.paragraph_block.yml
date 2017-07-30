@@ -1,0 +1,8 @@
+uuid: bcc1d1bb-6d65-4a14-9278-96210fbc8df1
+langcode: ru
+status: true
+dependencies: {  }
+id: paragraph_block
+label: 'Блок на параграфах'
+revision: 0
+description: 'Блок на параграфах содержит заголовок, тело и поле параграф.'

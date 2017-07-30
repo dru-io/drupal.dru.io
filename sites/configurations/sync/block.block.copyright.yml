@@ -1,0 +1,25 @@
+uuid: e7cbfdb3-c299-4c48-b5a6-019d79c15d23
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8460e9ce-1d71-4de6-8efa-32fa6220fdda'
+  module:
+    - block_content
+  theme:
+    - classier
+id: copyright
+theme: classier
+region: copyright
+weight: -4
+provider: null
+plugin: 'block_content:8460e9ce-1d71-4de6-8efa-32fa6220fdda'
+settings:
+  id: 'block_content:8460e9ce-1d71-4de6-8efa-32fa6220fdda'
+  label: 'Русскоязычное сообщество Drupal, 2017'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,31 @@
+uuid: c32df09e-b162-41be-841c-d037753fa0a1
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:block_with_bg:75e714b9-e63a-4189-b107-78c178b080e6'
+  module:
+    - block_content
+    - system
+  theme:
+    - classier
+id: proven_solution
+theme: classier
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:75e714b9-e63a-4189-b107-78c178b080e6'
+settings:
+  id: 'block_content:75e714b9-e63a-4189-b107-78c178b080e6'
+  label: 'Drupal — проверенное временем надежное решение'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

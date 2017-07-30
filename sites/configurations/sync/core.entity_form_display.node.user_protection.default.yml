@@ -1,0 +1,44 @@
+uuid: 457c9c48-b033-4199-9f03-5fc99a1c5d32
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.user_protection.body
+    - node.type.user_protection
+  module:
+    - path
+    - text
+id: node.user_protection.default
+targetEntityType: node
+bundle: user_protection
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  promote: true
+  sticky: true
+  uid: true

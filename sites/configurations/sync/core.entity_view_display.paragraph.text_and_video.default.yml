@@ -1,0 +1,86 @@
+uuid: 9c490288-702e-4448-aa35-47f08b491234
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_and_video.field_body
+    - field.field.paragraph.text_and_video.field_subtitle
+    - field.field.paragraph.text_and_video.field_youtube
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - field_group
+    - text
+    - youtube
+third_party_settings:
+  field_group:
+    group_left_side:
+      children:
+        - field_subtitle
+        - field_body
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Левая сторона'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'left-side item-side'
+      label: 'Левая сторона'
+    group_right_side:
+      children:
+        - field_youtube
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: 'Правая сторона'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'right-side item-side'
+      label: 'Правая сторона'
+id: paragraph.text_and_video.default
+targetEntityType: paragraph
+bundle: text_and_video
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_youtube:
+    weight: 2
+    label: hidden
+    settings:
+      youtube_size: 450x315
+      youtube_width: ''
+      youtube_height: ''
+      youtube_autoplay: false
+      youtube_loop: false
+      youtube_showinfo: false
+      youtube_controls: false
+      youtube_autohide: false
+      youtube_iv_load_policy: false
+    third_party_settings: {  }
+    type: youtube_video
+    region: content
+hidden: {  }

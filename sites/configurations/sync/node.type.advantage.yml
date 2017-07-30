@@ -1,0 +1,17 @@
+uuid: 66aa2cbb-3030-4920-a269-d7484e843d8e
+langcode: ru
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Преимущество
+type: advantage
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

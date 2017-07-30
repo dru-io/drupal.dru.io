@@ -1,0 +1,15 @@
+uuid: c2fc381c-ab4d-492d-ae42-51a3cfcfe15b
+langcode: ru
+status: true
+dependencies: {  }
+name: advantages_icon
+label: 'Advantages Icon'
+effects:
+  4c37a7c7-9b3a-4942-bf67-785346919d7f:
+    uuid: 4c37a7c7-9b3a-4942-bf67-785346919d7f
+    id: image_scale
+    weight: 1
+    data:
+      width: 200
+      height: null
+      upscale: false

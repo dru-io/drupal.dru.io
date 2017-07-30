@@ -1,0 +1,7 @@
+uuid: fbac2a5d-6800-47b2-a99d-e8a45ac05ad6
+langcode: ru
+status: true
+dependencies: {  }
+id: branding
+label: Branding
+behavior_plugins: {  }

@@ -1,0 +1,30 @@
+uuid: 80d8036f-31d3-41ca-9d4d-f04e5258e5a9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - views.view.saity_na_drupal
+  module:
+    - system
+    - views
+  theme:
+    - classier
+id: drupalsites
+theme: classier
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:saity_na_drupal-block_drupalsites'
+settings:
+  id: 'views_block:saity_na_drupal-block_drupalsites'
+  label: 'Сайты на Drupal'
+  provider: views
+  label_display: visible
+  views_label: 'Сайты на Drupal'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

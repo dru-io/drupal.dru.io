@@ -1,0 +1,12 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://drupal-logo-2.png'
+favicon:
+  use_default: 0
+  path: 'public://drupal-logo-2_0.png'
+  mimetype: image/png

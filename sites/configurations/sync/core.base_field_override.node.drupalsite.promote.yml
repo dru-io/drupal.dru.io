@@ -1,0 +1,22 @@
+uuid: efad1d50-0803-487d-bde2-e4e1d8c827ed
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.drupalsite
+id: node.drupalsite.promote
+field_name: promote
+entity_type: node
+bundle: drupalsite
+label: 'Помещено на главную страницу'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean

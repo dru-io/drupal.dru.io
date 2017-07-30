@@ -1,0 +1,22 @@
+uuid: 863d8b50-858b-43fb-ae6c-a664d69207a9
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.information_resource_drupal
+  module:
+    - text
+id: node.information_resource_drupal.body
+field_name: body
+entity_type: node
+bundle: information_resource_drupal
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

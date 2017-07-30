@@ -1,0 +1,21 @@
+uuid: beb10050-de1b-41fc-9729-b514460bf9d4
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.text_and_video
+  module:
+    - text
+id: paragraph.text_and_video.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: text_and_video
+label: Текст
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

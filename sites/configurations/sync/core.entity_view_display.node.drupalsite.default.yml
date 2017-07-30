@@ -1,0 +1,48 @@
+uuid: 4e0e14eb-60b1-424e-8a9c-e90bfbe61c77
+langcode: ru
+status: true
+dependencies:
+  config:
+    - field.field.node.drupalsite.body
+    - field.field.node.drupalsite.field_color
+    - field.field.node.drupalsite.field_logo
+    - field.field.node.drupalsite.field_sitescreen
+    - node.type.drupalsite
+  module:
+    - image
+    - text
+    - user
+id: node.drupalsite.default
+targetEntityType: node
+bundle: drupalsite
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_sitescreen:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_color: true
+  langcode: true
+  links: true

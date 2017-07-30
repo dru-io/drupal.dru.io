@@ -1,0 +1,11 @@
+uuid: fb4ebd8d-771b-4fd5-a150-2146bf1b71c3
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.drupalsite
+id: node.drupalsite
+target_entity_type_id: node
+target_bundle: drupalsite
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: 4214a54c-eb18-4ea4-9ba1-8c69cb2592df
+langcode: ru
+status: true
+dependencies:
+  config:
+    - node.type.coordinates
+id: node.coordinates.promote
+field_name: promote
+entity_type: node
+bundle: coordinates
+label: 'Помещено на главную страницу'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Вкл
+  off_label: Выкл
+field_type: boolean
