@@ -1,0 +1,7 @@
+name: Drupal Promo
+description: Custom module for Drupal promo website.
+type: module
+core: 8.x
+version: 1.x
+
+package: Custom

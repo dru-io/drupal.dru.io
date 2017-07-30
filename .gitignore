@@ -1,0 +1,29 @@
+#Ignore configuration files that may contain sensitive information.
+sites/*/settings.php
+## # Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+**/.sass-cache
+**/*.log
+error_log
+**/node_modules
+/core/*
+/vendor/*
+actions/*
+modules/contrib/*
+**/.css.map
+themes/*
+.well-known
+#default files
+.csslintrc
+.editorconfig
+.eslintignore
+.eslintrc
+.eslintrc.json
+.htaccess
+LICENSE.txt
+README.txt
+autoload.php
+index.php
+composer.lock
+

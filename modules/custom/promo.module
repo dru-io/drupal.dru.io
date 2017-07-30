@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Main file for hooks and custom functions.
+ */
+
+/**
+ * Implements hook_imagemagick_arguments_alter().
+ *
+ * Image optimization using imagemagick library.
+ * @see https://developers.google.com/speed/docs/insights/OptimizeImages (EN)
+ */
+function promo_imagemagick_arguments_alter(\Drupal\imagemagick\ImagemagickExecArguments $arguments, $command) {
+  $arguments->addArgument('-sampling-factor 4:2:0');
+  $arguments->addArgument('-interlace Plane');
+  $arguments->addArgument('-strip');
+}
