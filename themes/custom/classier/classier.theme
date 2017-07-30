@@ -1,0 +1,49 @@
+<?php
+
+// Necessary to ensure proper HTML classes.
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function classier_preprocess_node__article(&$variables) {
+  // Get a convenient $node variable;
+  $node = $variables['node'];
+
+  // Get the tags and their values.
+  $field_tags = $node->field_tags;
+  foreach ($field_tags->referencedEntities() as $tag) {
+    $variables['attributes']['class'][] = Html::getClass('term-' . $tag->name->value);
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function classier_preprocess_block(&$variables) {
+    $provider = $variables['configuration']['provider'];
+    $plugin = $variables['plugin_id'];
+    if ($provider === 'block_content'){
+		$uuid = str_replace('block_content:', '', $plugin);
+		
+		$query = \Drupal::database()->select('block_content', 'b');
+		$query->addField('b', 'id');
+		$query->condition('b.uuid', $uuid);
+		$id = $query->execute()->fetchField();
+		
+		$variables['attributes']['id'] = 'block-'.$id;
+	}
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ */
+function classier_preprocess_html(&$variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $path_args = explode('/', $path);
+  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
+    $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
+  }
+}

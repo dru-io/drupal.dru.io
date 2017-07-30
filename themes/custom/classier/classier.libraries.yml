@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+      css/modules/bylines.css: {}
+      css/style.css: {}
+      css/animate.css: {}
+
+  js:
+    js/jquery.ui.js: {}
+    js/blazy-fix.js: {}
+    js/menu.js: {}
+    js/message.js: {}
+    js/other.js: {}
+    js/viewportchecker.js: {}
+    js/anim.js: {}
+
+
+
+

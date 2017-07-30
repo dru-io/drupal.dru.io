@@ -11,7 +11,7 @@ tags:
   keywords: 'drupal, друпал, что такое друпал, CMS Drupal'
   title: 'Почему мы выбираем Drupal'
   og_description: 'Почему мы выбираем Drupal как платформу для разработки сайтов и сервисов'
-  og_image: 'http://drupal.dru.io/themes/classier/images/drupromo_og.jpg'
+  og_image: 'http://drupal.dru.io/themes/custom/classier/images/drupromo_og.jpg'
   og_image_url: 'http://drupal.dru.io/themes/classier/images'
   og_locale: ru_RU
   og_site_name: 'Почему Drupal'

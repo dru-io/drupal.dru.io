@@ -1,0 +1,2779 @@
+//=====================================
+//=Подключаем шрифты
+//=====================================
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800'); // Open Sans
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700'); // Ubuntu
+@font-face{
+	font-family: 'Neris';
+	src: url('../fonts/neris/Neris-Black.otf');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Neris';
+	src: url('../fonts/neris/Neris-SemiBold.otf');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face{
+	font-family: 'Neris';
+	src: url('../fonts/neris/Neris-Thin.otf');
+	font-weight: 100;
+	font-style: normal;
+}
+//=====================================
+//=End of Подключаем шрифты
+//=====================================
+
+//=====================================
+//=Шрифты
+//=====================================
+$font_title: 'Neris';
+$font_text: Ubuntu;
+$font_text_alt: Open Sans;
+//=====================================
+//=End of Шрифты
+//=====================================
+
+//=====================================
+//=Цвета
+//=====================================
+$color_title: #282828; // Почти черный
+$color_text: #585858; // Серый
+$color_alt: #fff; // Белый
+$color_style: #6f7cfd; // Оттенок фиолетового
+$color_link: #67bdff; // цвет ссылки
+$color_button_text: #4f76b6; // цвет текста в кнопке
+//=====================================
+//=End of Цвета
+//=====================================
+
+//=====================================
+//=Грандиенты
+//=====================================
+$gradient_1: linear-gradient(to right, #716efc 0%, #6b8aff 52%, #67bdff 100%);
+$gradient_2: linear-gradient(to right, #716efc 0%, #6b8aff 52%, #67bdff 100%);
+//=====================================
+//=End of Грандиенты
+//=====================================
+
+//=====================================
+//=Общие свойства для повторяющихся элементов
+//=====================================
+
+::selection {
+	background-color: $color-style;
+	color: $color_alt;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family: $font_text;
+	color: $color_text;
+}
+img{
+	width: 100%;
+	height: auto;
+	display: block;
+}
+ul, li, p, h1, h2, h3, h4, h5, h6, span, a, figure{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	color: inherit;
+	text-decoration: inherit;
+}
+a:hover{
+	text-decoration: none;
+}
+textarea{
+	resize: none !important; // important т.к. в файле resize.module.css есть свойство, которое приходится перебивать.
+	box-sizing: border-box;
+}
+// Отступ от абзацев
+p:not(:last-child){
+	margin-bottom: 1em;
+}
+
+// заголовок
+.field--name-field-title {
+	color: $color_title;
+	font-family: $font_text;
+	font-weight: 300;
+	line-height: 1.3;
+	font-size: 24px;
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		font-size: 20px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 18px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 16px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 14px;
+	}
+	span{
+		font-size: 34px;
+		@extend %uppercase;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 28px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 24px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 20px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 18px;
+		}
+	}
+	strong{
+		margin-top: 25px;
+		font-size: 44px;
+
+		font-family: $font_title;
+		font-weight: 900;
+		line-height: 1.3;
+		display: block;	
+		@extend %uppercase;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 34px;
+			margin-top: 15px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 30px;
+			margin-top: 15px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 26px;
+			margin-top: 5px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 24px;
+			margin-top: 5px;
+		}
+	}
+}
+// заголовок блока
+h2{
+	color: $color_alt;
+	font-family: $font_title;
+	font-size: 44px;
+	font-weight: 900;
+	line-height: 1.3;
+	text-align: center;
+	@extend %uppercase;
+	margin-bottom: 50px;
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		font-size: 34px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 30px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 26px;
+		margin-bottom: 20px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+}
+// подзаголовок
+.field--name-field-subtitle {
+	color: $color_title;
+	font-family: $font_title;
+	font-size: 44px;
+	font-weight: 900;
+	line-height: 1.3;
+	@extend %uppercase;
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		font-size: 34px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 30px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 26px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 24px;
+	}
+}
+// тело
+.field--name-field-body{
+	font-size: 22px;
+	font-weight: 300;
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		font-size: 20px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 16px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 14px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 12px;
+	}
+	span{
+		display: block;
+		font-weight: 700;
+		@extend %uppercase;
+	}
+}
+// Кнопки переключатели для карусели
+.slick-arrow{
+	background-color: transparent;
+	color: transparent;
+	font-size: 0;
+	width: 50px;
+	height: 28px;
+	border: none;
+	position: absolute;
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		transform: scale(0.7);
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		transform: scale(0.3);
+	}
+}
+.slick-prev.slick-arrow{
+	background-image: url('../images/icons/i-left-arrow.png');
+	left: 0;
+}
+.slick-next.slick-arrow{
+	background-image: url('../images/icons/i-right-arrow.png');
+	right: 0;
+}
+.slick__arrow{
+	position: absolute;
+	top: -90px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 730px;
+	&.visually-hidden{
+		overflow: unset;
+		clip: unset;
+	}
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		top: -83px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		width: 540px;
+		top: -80px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		max-width: 410px;
+		top: -50px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		max-width: 100%;
+		top: -47px;
+	}
+}
+* {
+	outline: none;
+	&:hover {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:active {
+		outline: none;
+	}
+}
+//=====================================
+//=End of Общие свойства для повторяющихся элементов
+//=====================================
+
+
+
+//=====================================
+//=mixins
+//=====================================
+@mixin col($options: ()){
+	@if (if(map-get($options, desktop), 1, 0) == 1) {
+		@media screen and (min-width: 1180px) {         
+			$col-width: map-get($options, desktop);
+			$cols-count: floor(100% / $col-width);
+
+			width: $col-width;
+			margin-right: (100% - ($col-width * $cols-count)) / ($cols-count - 1);
+			&:nth-child(#{$cols-count}n) {
+				margin-right: 0;
+			}
+		}
+	}
+	@if (if(map-get($options, mtl), 1, 0) == 1) {
+		@media screen and (min-width: 980px) and (max-width: 1179px) {          
+			$col-width: map-get($options, mtl);
+			$cols-count: floor(100% / $col-width);
+
+			width: $col-width;
+			margin-right: (100% - ($col-width * $cols-count)) / ($cols-count - 1);
+			&:nth-child(#{$cols-count}n) {
+				margin-right: 0;
+			}
+		}
+	}
+	@if (if(map-get($options, mtp), 1, 0) == 1) {
+		@media screen and (min-width: 768px) and (max-width: 979px) {           
+			$col-width: map-get($options, mtp);
+			$cols-count: floor(100% / $col-width);
+
+			width: $col-width;
+			margin-right: (100% - ($col-width * $cols-count)) / ($cols-count - 1);
+			&:nth-child(#{$cols-count}n) {
+				margin-right: 0;
+			}
+		}
+	}
+	@if (if(map-get($options, msl), 1, 0) == 1) {
+		@media screen and (min-width: 480px) and (max-width: 767px) {           
+			$col-width: map-get($options, msl);
+			$cols-count: floor(100% / $col-width);
+
+			width: $col-width;
+			margin-right: (100% - ($col-width * $cols-count)) / ($cols-count - 1);
+			&:nth-child(#{$cols-count}n) {
+				margin-right: 0;
+			}
+		}
+	}
+	@if (if(map-get($options, msp), 1, 0) == 1) {
+		@media screen and (min-width: 1px) and (max-width: 479px) {         
+			$col-width: map-get($options, msp);
+			$cols-count: floor(100% / $col-width);
+
+			width: $col-width;
+			margin-right: (100% - ($col-width * $cols-count)) / ($cols-count - 1);
+			&:nth-child(#{$cols-count}n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+@mixin row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	position: relative;
+}
+//=====================================
+//=End of mixins
+//=====================================
+
+//=====================================
+//=Селекторы расширения
+//=====================================
+
+//Белая кнопка
+%white-button{
+	border-radius: 5px;
+	border: none;
+	line-height: 1;
+	background-color: $color_alt;
+	color: $color_button_text;
+	font-size: 14px;
+	padding: 20px 75px 20px 25px;
+	@extend %uppercase;
+	background-image: url('../images/bg/blue-pixel.jpg'), url('../images/bg/right-arrow-btn.png');
+	background-position: 140px 0, 150px 50%;
+	background-repeat: repeat-y, no-repeat;
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding: 15px 70px 15px 20px;
+		background-position: 130px 0, 143px 50%;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding: 15px 70px 15px 20px;
+		background-position: 130px 0, 143px 50%;
+	}
+	&:hover{
+		background-color: rgba($color_alt, 0.8);
+	}
+}
+// End of Белая кнопка
+
+// Полупрозрачная вебформа
+%white-webform{
+	label{
+		display: none;
+	}
+	input[type="text"],
+	input[type='email'],
+	input[type='password']{
+		width: 100%;
+		padding: 25px;
+		box-sizing: border-box;
+		box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.58), inset 0 0 4px rgba(255, 255, 255, 0.3);
+		background-color: rgba(255, 255, 255, 0.15);
+		border: none;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding: 15px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding: 15px;
+		}
+	}
+	/* placeholders */
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		font-size: 14px;
+	}
+	input[type="text"]::-webkit-input-placeholder{
+		color: $color_alt;
+	}
+	input[type="text"]:-moz-input-placeholder{
+		color: $color_alt;
+	}
+	input[type="email"]::-webkit-input-placeholder{
+		color: $color_alt;
+	}
+	input[type="email"]:-moz-input-placeholder{
+		color: $color_alt;
+	}
+	textarea::-webkit-input-placeholder{
+		color: $color_alt;
+	}
+	textarea:-moz-input-placeholder{
+		color: $color_alt;
+	}
+	/* end of placeholders */
+
+	.form-item:first-child{
+		input{
+			border-radius: 5px 5px 0 0;
+		}
+	}
+
+	textarea{
+		width: 100%;
+		padding: 25px;
+		box-sizing: border-box;
+		box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.58), inset 0 0 4px rgba(255, 255, 255, 0.3);
+		background-color: rgba(255, 255, 255, 0.15);
+		border-radius: 0 0 5px 5px;
+		border: none;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding: 15px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding: 15px;
+		}
+	}
+	.js-form-type-textfield,
+	.js-form-type-email,
+	.js-form-type-textarea{
+		margin: 0;
+	}
+	// Задаем слабо-заметный отступ каждому второму текстовому элементу.
+	.js-form-item:nth-child(2n){
+		margin-top: 1px;
+		margin-bottom: 1px;
+	}
+}
+//end of Полупрозрачная вебформа
+
+// Стрелки переключатели для слайдеров
+%left-button{
+
+}
+%right-button{
+
+}
+// End of Стрелки переключатели для слайдеров
+
+// Заглавные буквы
+%uppercase{
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+// End of Заглавные буквы
+
+%del_layout{
+	max-width: none;
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+//=====================================
+//=End of Селекторы расширения
+//=====================================
+
+
+//=====================================
+//=Сетка
+//=====================================
+.region-inner{
+	.block{
+		.block-content {
+			max-width: 1170px;
+			margin: 0 auto;
+			@media screen and (min-width: 980px) and (max-width: 1179px) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			@media screen and (min-width: 768px) and (max-width: 979px) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			@media screen and (min-width: 480px) and (max-width: 767px) {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			@media screen and (min-width: 1px) and (max-width: 479px) {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+}
+//=====================================
+//=End of Сетка
+//=====================================
+
+//=====================================
+//=НЕглавные страницы
+//=====================================
+.not-front{
+	header{
+		background-color: rgba($color_style, 0.9);
+		border-bottom: 1px solid rgba($color_style, 0.4);
+	}
+	footer{
+		border-top: 1px solid #d1d1d1;
+	}
+	.layout-content{
+		padding: 130px 0 150px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding: 120px 0 110px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding: 100px 0 110px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding: 90px 0 50px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding: 90px 0 50px;
+		}
+	}
+	#block-classier-page-title{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	#block-classier-content{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+//=====================================
+//=End of НЕглавные страницы
+//=====================================
+
+.not-front{
+	.layout-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100vh;
+	}	
+	main{
+		flex-grow: 1;
+	}
+}
+
+//=====================================
+//=Страницы 403, 404
+//=====================================
+.page-node-type-error{
+	h1{
+		color: $color_title;
+		font-family: $font_text_alt;
+		font-size: 150px;
+		font-weight: 800;
+		line-height: 1;
+		margin: 0;
+		margin-bottom: 0px;
+		margin-bottom: 30px;
+		text-align: left !important;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 90px;
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 90px;
+			margin-bottom: 10px;
+		}
+		&:after{
+			background-color: $color_style;
+			content: "";
+			display: block;
+			height: 10px;
+			width: 100px;
+			margin: 5px 0 0;
+		}
+	}
+	h2{
+		color: $color_title;
+		font-size: 40px;
+		line-height: 1;
+		text-align: left;
+		font-weight: 800;
+		margin-bottom: 15px;
+		text-transform: unset;
+		letter-spacing: normal;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 24px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 24px;
+		}
+	}
+	p{
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 14px;	
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+	a{
+		color: $color_link;
+	}
+
+}
+//=====================================
+//=End of Страницы 403, 404
+//=====================================
+
+
+//=====================================
+//=Страница User
+//=====================================
+.path-user{
+	// Заголовок страницы
+	#block-classier-page-title{
+		color: $color_title;
+		font-family: $font_title;
+		font-size: 26px;
+		margin-bottom: 20px;
+		font-weight: 900;
+		@extend %uppercase;
+	}
+
+	// webform - войти на сайт
+	#user-login-form{
+		@extend %white-webform;
+		max-width: 500px;
+	}
+	// Описание под полем
+	.description{
+		margin-top: 5px;
+	}
+	// Кнопка
+	#edit-submit{
+		@extend %white-button;
+		border: 1px solid $color_style;
+		background-position: 100px 0, 115px 50%;
+		margin-top: 35px;
+	}
+}
+//=====================================
+//=End of Страница User
+//=====================================
+
+//=====================================
+//=Отступы у блоков
+//=====================================
+main{
+	.block{
+		padding: 120px 0 130px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding: 100px 0 110px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding: 80px 0 90px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding: 30px 0 40px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding: 40px 0 60px;
+		}
+	}
+}
+//=====================================
+//=End of Отступы у блоков
+//=====================================
+
+
+//=====================================
+//=Логотип и Основная навигация
+//=====================================
+#block-6{
+	display: flex;
+	align-items: center;
+	.block-content{
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+// Параграф - Брэндинг
+.paragraph--type--branding{
+	color: $color_alt;
+	font-family: $font_title;
+	font-size: 30px;
+	font-weight: 900;
+	position: relative;
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 24px;
+	}
+	.paragraphs--inner{
+		display: flex;
+		align-items: center;
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			max-width: 110px;
+		}
+	}
+	// Ссылка
+	.field--name-field-link{
+		a{
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			color: transparent;
+			font-size: 0;			
+		}
+	}
+	// Логотип
+	.field--name-field-logo{
+		margin-right: 15px;
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			margin-right: 10px;
+		}
+	}
+
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 490;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+	.region-inner{
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+	}
+	&.animated-menu{
+		background-color: rgba($color_style, 0.9);
+		border-bottom: 1px solid rgba($color_style, 0.4);
+		box-shadow: 0 0 20px 1px rgba(16, 16, 16, 0.43);
+
+	}
+}
+
+
+
+
+
+// правим плавающее меню для администратора
+.toolbar-fixed{
+	header{
+		top: 40px;
+	}
+	&.toolbar-tray-open{
+		header{
+			top: 80px;
+			@media screen and (min-width: 980px) and (max-width: 1201px) {
+				top: 120px;
+			}
+			@media screen and (min-width: 768px) and (max-width: 979px) {
+				top: 40px;
+			}
+		}
+	}
+}
+.menu--open{
+	ul.menu{
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			display: block;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			display: block;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			display: block;
+		}
+	}
+}
+ul.menu{
+	display: flex;
+	justify-content: space-between;
+	padding: 30px 0;
+	margin: 0;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		flex-direction: column;
+		background-color: rgba($color_alt, 1);
+		padding: 50px 20px;
+		display: none;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		flex-direction: column;
+		background-color: rgba($color_alt, 1);
+		padding: 50px 20px;
+		display: none;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		flex-direction: column;
+		background-color: rgba($color_alt, 1);
+		padding: 50px 20px;
+		display: none;
+	}
+	.menu-item{
+		color: $color_alt;
+		font-family: $font_text_alt;
+		font-size: 14px;
+		padding-top: 0;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 14px;
+			margin-right: 0;
+			border-bottom: 1px solid #efefef;
+			color: $color_link;
+			font-weight: 700;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 14px;
+			margin-right: 0;
+			border-bottom: 1px solid #efefef;
+			color: $color_link;
+			font-weight: 700;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 14px;
+			margin-right: 0;
+			border-bottom: 1px solid #efefef;
+			color: $color_link;
+			font-weight: 700;
+		}
+	}
+	.menu-item:not(:last-child){
+		margin-right: 50px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			margin-right: 40px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			margin-right: 0px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			margin-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			margin-right: 0;
+		}
+	}
+
+	.current{
+		a{
+			border-bottom: 3px solid $color_alt;
+			@media screen and (min-width: 768px) and (max-width: 979px) {
+				border-bottom: 3px solid #color_style;
+			}
+			@media screen and (min-width: 480px) and (max-width: 767px) {
+				border-bottom: 3px solid #color_style;
+			}
+			@media screen and (min-width: 1px) and (max-width: 479px) {
+				border-bottom: 3px solid #color_style;
+			}
+		}
+	}
+	a{
+		color: inherit;
+		text-decoration: inherit;
+		padding: 29px 0; // Для того чтобы border активного пункта был прижат к низу меню
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding: 15px 0;
+			width: 100%;
+			display: block;	
+			border-bottom: 3px solid transparent;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding: 5px 0;
+			width: 100%;
+			display: block;	
+			border-bottom: 3px solid transparent;
+			font-size: 12px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding: 10px 0;
+			width: 100%;
+			display: block;		
+			border-bottom: 3px solid transparent;
+			font-size: 12px;
+		}
+		&.is-active{
+			color: inherit;
+		}
+		&:hover{
+			border-bottom: 3px solid $color_link;
+		}
+	}
+}
+//=====================================
+//=End of Логотип и Основная навигация
+//=====================================
+
+//=====================================
+//=Мобильное меню
+//=====================================
+
+/* Гамбургер */
+.menu--open{
+	#csmenu{
+		span{
+			background-color: $color_link;
+			transform: rotate(45deg);
+
+			&:before{
+				content: none;
+			}
+			&:after{
+				background-color: $color_link;
+				transform: rotate(90deg) translateX(-21%);
+			}
+			
+		}
+	}
+}
+#csmenu{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	span{
+		position: relative;
+		width: 40px;
+		height: 4px;
+		background-color: $color_alt;
+		display: block;
+		color: transparent;
+		font-size: 0;
+		z-index: 490;
+		transition: 0.2s ease;
+		&:before,
+		&:after{
+			transition: 0.2s ease;
+			position: absolute;
+			content: "";
+			display: block;
+			width: 40px;
+			height: 4px;
+			background-color: $color_alt;
+		}
+		&:before{
+			top: -10px;
+		}
+		&:after{
+			top: 10px;
+		}
+	}
+	@media screen and (min-width: 1180px) {
+		display: none;
+	}
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		display: none;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		
+	}
+}
+/* end of Гамбургер */
+
+//=====================================
+//=End of Мобильное меню
+//=====================================
+
+//=====================================
+//=Почему мы выбираем Drupal
+//=====================================
+#block-7{padding-top: 210px;
+	padding-bottom: 135px;
+	font-family: "Open Sans";
+	color: $color_alt;
+	background-position: center 0;
+	background-repeat: no-repeat;
+	@media screen and (min-width: 1180px) {
+		background-attachment: fixed;
+		animation: motion 70s linear infinite;
+		background-size: 200%;
+	}
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		padding-top: 170px;
+		padding-bottom: 100px;
+		animation: motion 70s linear infinite;
+		background-size: 200%;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		padding-top: 110px;
+		padding-bottom: 60px;
+		animation: motion 70s linear infinite;
+		background-size: 200%;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding-top: 120px;
+		padding-bottom: 70px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding-top: 90px;
+		padding-bottom: 30px;
+		background-size: 200%;
+	}
+	.block-content{
+		max-width: 600px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			max-width: 535px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			max-width: 440px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			max-width: 330px;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+			max-width: 200px;
+		}
+	}
+	// Почему мы выбираем
+	.field--name-field-title{
+		font-family: $font_text_alt;
+		font-size: 30px;
+		font-weight: 700;
+		color: $color_alt;
+		@extend %uppercase;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 24px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 20px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+		// Drupal
+		strong{
+			font-size: 184px;
+			text-transform: none;
+			letter-spacing: normal;
+			position: relative;
+			margin-left: -12px;
+			line-height: 1;
+			margin-top: -10px; // даже при line-height равным 1, сверху от шрифта остается пустое пространство. Именно поэтому приходится задавать отрицательный отступ, дабы он был таким как в дизайне.
+			margin-bottom: 35px;
+			@media screen and (min-width: 980px) and (max-width: 1179px) {
+				font-size: 164px;
+			}
+			@media screen and (min-width: 768px) and (max-width: 979px) {
+				font-size: 130px;
+			}
+			@media screen and (min-width: 480px) and (max-width: 767px) {
+				font-size: 100px;
+				margin-left: -6px;
+			}
+			@media screen and (min-width: 1px) and (max-width: 479px) {
+				font-size: 60px;
+				margin-bottom: 10px;
+				margin-left: -4px;
+
+			}
+			// TM
+			span{
+				display: inline-block;
+				font-size: 50px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				@media screen and (min-width: 980px) and (max-width: 1179px) {
+					font-size: 46px;
+				}
+				@media screen and (min-width: 768px) and (max-width: 979px) {
+					font-size: 36px;
+				}
+				@media screen and (min-width: 480px) and (max-width: 767px) {
+					font-size: 34px;
+				}
+				@media screen and (min-width: 1px) and (max-width: 479px) {
+					font-size: 22px;
+				}
+			}
+		}
+	}
+	.field--name-body{
+		font-size: 24px;
+		max-width: 375px;
+		text-transform: lowercase;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 20px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 16px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+}
+//=====================================
+//=End of Почему мы выбираем Drupal
+//=====================================
+
+//=====================================
+//=Блок - Что такое Drupal?
+//=====================================
+#block-1{
+	padding: 110px 0 120px;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		padding: 90px 0 100px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding: 40px 0 50px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding: 40px 0 50px;
+	}
+}
+//=====================================
+//=End of Блок - Что такое Drupal?
+//=====================================
+
+//=====================================
+//=Параграф - Текст и видео
+//=====================================
+.paragraph--type--text-and-video{
+	.paragraphs--inner{
+		display: flex;
+		justify-content: space-between;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			flex-wrap: wrap;
+		}
+	}
+	// Блок с заголовком и телом слева
+	.left-side{
+		width: 46%;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			width: 45%;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			width: 35%;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+	// Блок с видео справа
+	.right-side{
+		width: 45%;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			width: 60%;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			width: 100%;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			width: 100%;
+		}
+	}
+	// подзаголовок
+	.field--name-field-subtitle{
+		margin-bottom: 35px;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			margin-bottom: 5px;
+		}
+	}
+	// тело
+	.field--name-field-body{
+	}
+}
+.youtube-container{
+	text-align: right;
+	iframe{
+		width: 100%;
+		border: 7px solid #f2f2f2;
+		box-sizing: border-box;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			border-width: 6px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			border-width: 5px;
+			height: 55vw;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			border-width: 4px;
+			height: 60vw;
+		}
+	}
+}
+//=====================================
+//=End of Параграф - Текст и видео
+//=====================================
+
+//=====================================
+//=Блок с достижениями
+//=====================================
+#block-13{
+	background-image: $gradient_1;
+	padding: 70px 0;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		padding: 50px 0;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding: 40px 0;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding: 25px 0;
+		background-image: linear-gradient(64deg, #716efc 0%, #6b8aff 8%, #67bdff 100%);
+	}
+	.field--name-field-paragraph{
+		display: flex;
+		justify-content: space-between;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			flex-wrap: wrap;
+		}
+		// Карточка с достижением
+		> .field__item{
+			width: 145px;
+			display: flex;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			box-sizing: border-box;
+			@media screen and (min-width: 768px) and (max-width: 979px) {
+				width: 100px;
+			}
+			@media screen and (min-width: 480px) and (max-width: 767px) {
+				width: 32%;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-bottom: 35px;
+			}
+			@media screen and (min-width: 1px) and (max-width: 479px) {
+				width: 49%;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-bottom: 30px;
+			}
+		}
+		> .field__item:nth-child(1){
+			background-image: url('../images/bg/D.png');
+		}
+		> .field__item:nth-child(2){
+			background-image: url('../images/bg/R.png');
+		}
+		> .field__item:nth-child(3){
+			background-image: url('../images/bg/U.png');
+		}
+		> .field__item:nth-child(4){
+			background-image: url('../images/bg/P.png');
+		}
+		> .field__item:nth-child(5){
+			background-image: url('../images/bg/A.png');
+		}
+		> .field__item:nth-child(6){
+			background-image: url('../images/bg/L.png');
+		}
+	}
+}
+
+// Параграф - Достижение
+.paragraph--type--achievement-paragraph{
+
+	color: $color_alt;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1.4;
+	text-align: center;
+	display: flex;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 12px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 12px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 12px;
+	}
+	.paragraphs--inner{
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-end;
+	}
+	.field--name-field-comparison{
+		margin-bottom: 10px;
+		width: 100%;
+	}
+	.field--name-field-value{
+		width: 100%;
+		font-family: $font_title;
+		font-weight: 900;
+		line-height: 1;
+		margin-bottom: 10px;
+		font-size: 32px;
+
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 22px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 20px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 18px;
+		}
+	}
+	.field--name-field-sign{
+		height: 60px;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			height: 70px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			
+		}
+	}
+}
+// end of параграф - достижение
+
+//=====================================
+//=End of Блок с достижениями
+//=====================================
+
+
+
+//=====================================
+//=Блоки с заголовком слева и с телом справа
+//=====================================
+#block-8,
+#block-9,
+#block-10{
+	padding: 90px 0;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		padding: 70px 0;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding: 50px 0;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding: 50px 0;
+	}
+	.block-content{
+		display: flex;
+		justify-content: space-between;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			flex-direction: column;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			flex-direction: column;
+		}
+	}
+	.field--name-field-title{
+		width: 43%;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			width: 47%;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
+	.field--name-body{
+		width: 45%;
+		font-size: 20px;
+		font-weight: 300;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 16px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 14px;
+			width: 100%;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+			width: 100%;
+		}
+		span{
+			@extend %uppercase;
+			font-weight: 700;
+			display: block;
+		}
+	}
+}
+//=====================================
+//=End of Блоки с заголовком слева и с телом справа
+//=====================================
+
+//=====================================
+//=Блок - карусель - сайты на Drupal
+//=====================================
+#block-drupalsites{
+	background-image: $gradient_1;
+	position: relative;
+	padding-top: 70px;
+	padding-bottom: 80px;
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding-top: 50px;
+		padding-bottom: 70px;
+	}
+	.block-content{
+		max-width: none;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+}
+// Представление - Сайты на Drupal
+.view-saity-na-drupal{
+	color: $color_alt;
+	line-height: 1.3;
+
+	.view-content{
+		position: relative;
+	}
+	.slick-track{
+		cursor: grab;
+	}
+	.slick__slide{
+		margin-left: 10px;
+		margin-right: 10px;
+		background-color: #999;
+		padding: 40px 30px 0;
+		box-sizing: border-box;
+		transform: translateX(-50%); // важно чтобы значение было отрицательным
+		outline: none;
+		@media screen and (min-width: 1600px) {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		// @media screen and (min-width: 1180px) and (max-width: 1600px) {
+		// 	padding-left: 50px;
+		// 	padding-right: 50px;
+		// }
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			//transform: unset;
+			margin-left: 5px;
+			margin-right: 5px;
+			padding: 25px 20px 0;
+			transform: none;
+		}
+	}
+	.card-wrapper{
+		height: 400px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		display: block;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			height: 350px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			height: 340px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			height: 300px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			height: 330px;
+		}
+	}
+	.views-field-field-logo,
+	.logo-wrapper{
+		margin-bottom: 50px;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			margin-bottom: 30px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			margin-bottom: 30px
+		}
+		img{
+			max-width: 100%;
+			max-height: 50px;
+			height: auto;
+			width: auto;
+			@media screen and (min-width: 480px) and (max-width: 767px) {
+				max-height: 30px;
+			}
+			@media screen and (min-width: 1px) and (max-width: 479px) {
+				max-height: 30px
+			}
+		}
+	}
+	.views-field-body,
+	.body-wrapper{
+		margin-bottom: 50px;
+		font-size: 16px;
+		@media screen and (min-width: 1180px) and (max-width: 1600px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+	.views-field-field-sitescreen,
+	.sitescreen-wrapper{
+		position: absolute;
+		bottom: 0;
+		@media screen and (min-width: 1180px) and (max-width: 1600px) {
+			
+		}
+	}
+	img{
+		width: auto;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	// colors
+	.slide--0 /* GoodFood */ {
+		background-color: #657D35;
+		// color: #232323;
+	}
+	.slide--1 {
+		background-color: #E47201;
+	}
+	.slide--2 /* Royal Mail */ {
+		background-color: #B1151E;;
+	}
+	.slide--3 /* Puma */ {
+		background-color: #F01916;
+	}
+	.slide--4 /* Timex */ {
+		background-color: #424041;
+	}
+	.slide--5 /* The White House */ {
+		background-color: #005F9A;;
+	}
+	.slide--6 /* Forbes */ {
+		background-color: #DC1C3D;;
+	}
+	.slide--7 /* Australian Government */ {
+		background-color: #18A9C0;;
+	}
+	.slide--8 /* Grammy */ {
+		background-color: #212121;;
+		// color: #fff;
+	}
+}
+//=====================================
+//=End of Блок - карусель - сайты на Drupal
+//=====================================
+
+//=====================================
+//=Преимущества Drupal
+//=====================================
+#block-advantages-drupal{
+	position: relative;
+	background-image: $gradient_1;
+	padding-top: 70px;
+	padding-bottom: 80px;
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		padding-top: 40px;
+		padding-bottom: 50px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		padding-top: 50px;
+		padding-bottom: 70px;
+	}
+	h2 {
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			max-width: 300px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+	.block-content{
+		max-width: none;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+// Представление - Преимущества Друпал
+.view-advantages-drupal{
+	position: relative;
+	.view-content{
+		
+	}
+	.views-row{
+		
+	}
+	.slick-list {
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-right: 70px;
+		}
+	}
+	.slick-slide{
+		margin-left: 5px;
+		margin-right: 5px;
+		outline: none;
+		> div:nth-child(2n){
+			transform: translateX(33%);
+			@media screen and (min-width: 1px) and (max-width: 479px) {
+				transform: none;
+			}
+		}
+	}
+	.slick__slide{
+		margin-bottom: 10px;
+		background-color: $color_alt;
+		//height: 180px;
+	}
+	.field-content{
+		display: block;
+		box-sizing: border-box;
+		position: relative;
+		padding: 35px 45px 30px 40px;
+		overflow: hidden;
+		height: 180px;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			height: 130px;
+			padding: 15px 25px 10px 20px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding: 15px 25px 10px 20px;
+			height: 145px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding: 15px 25px 10px 20px;
+			height: 140px;
+		}
+	}
+	
+	// Левая обертка карточки - в ней изображение
+	.img-wrapper{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		transform: translate(35%, 35%);
+		opacity: 0.2;
+	}
+	img{
+	}
+	// Правая обертка карточки - в ней заголовок и тело
+	.card-content {
+		flex: 1 1px;
+	}
+	// Заголовок внутри right-side
+	.title-wrapper{
+		color: $color_title;
+		font-size: 22px;
+		margin-bottom: 10px;
+		font-weight: 700;
+		line-height: 1;
+
+		font-size: 16px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 16px;
+		}
+	}
+	// тело внутри right-side
+	.body-wrapper{
+		color: #777777;
+		font-weight: 300;
+		line-height: 1.3;
+		font-size: 14px;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+
+	// стрелки переключатели
+	.slick__arrow{
+		max-width: 830px;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			max-width: 620px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			max-width: 465px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			// max-width: 210px;
+			max-width: 100%;
+			top: -64px;
+		}
+	}
+	button{
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			transform: scale(0.5);
+		}
+	}
+}
+//=====================================
+//=End of Преимущества Drupal
+//=====================================
+
+//=====================================
+//=Карта
+//=====================================
+#block-map{
+	padding: 0;
+	.block-content{
+		max-width: none;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	// По умолчанию, высота карты задается в inline стилях. Именно поэтому приходится использоваться !important
+	.geolocation-common-map-container{
+		height: 600px !important;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			height: 370px !important;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			height: 350px !important;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			height: 300px !important;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			height: 250px !important;
+		}
+	}
+	.field--name-title {
+		a {
+			pointer-events: none;
+		}
+	}
+}
+.view-karta{
+	h2{
+		margin-bottom: 5px;
+		color: $color_title;
+		font-size: 14px;
+		text-align: left;
+		text-decoration: none;
+	}
+	img{
+		width: auto;
+	}
+	.field--name-field-marker{
+		display: none;
+	}
+	.field--name-field-image{
+		img{
+			width: 100%;
+		}
+	}
+}
+//=====================================
+//=End of Карта
+//=====================================
+
+//=====================================
+//=Информационные ресурсы Drupal
+//=====================================
+#block-information-resource{
+	// background-image: $gradient_1
+	background-color: #efefef;
+	color: #000;
+	.view-information-resource-drupal .description-of-view {
+		color: #444;
+	}
+	.view-information-resource-drupal .title-of-view {
+		color: inherit;
+	}
+}
+.view-information-resource-drupal{
+	.view-header{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			flex-direction: column;
+			margin-bottom: 30px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+	}
+
+	.title-of-view{
+		color: $color_alt;
+		font-family: $font_title;
+		font-size: 44px;
+		font-weight: 900;
+		line-height: 1.3;
+		@extend %uppercase;
+
+		margin-right: 170px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 34px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 30px;
+			margin-right: 40px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 26px;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 24px;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+	}
+	.description-of-view{
+		color: $color_alt;
+		font-size: 20px;
+		font-weight: 300;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 16px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+	.view-content{
+		@include row;
+	}
+	.views-row{
+		@include col(( desktop: 18%, mtl: 24%, mtp: 32%, msl: 49%, msp: 49%)); 
+		margin-bottom: 30px;
+		text-align: center;
+		box-shadow: none;
+		background-color: #fff;
+		transition-duration: 0.2s;
+		&:hover{
+			box-shadow: 0 0 30px -4px #777;
+			@media screen and (min-width: 1180px) {
+				transform: scale(1.1);
+			}
+		}
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			margin-bottom: 15px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			margin-bottom: 15px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			margin-bottom: 7px;
+		}
+	}
+
+	a{
+		text-decoration: none;
+		padding: 55px 30px 40px 30px;
+		display: block;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding: 50px 30px 40px 30px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding: 30px 10px 20px 10px
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding: 30px 10px 20px 10px
+		}
+	}
+	// Обертка логотипа
+	.logo-wrapper{
+		margin-bottom: 35px;
+		width: 100px;
+		height: 100px;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			margin-bottom: 25px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			margin-bottom: 20px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			margin-bottom: 10px;
+		}
+	}
+	// Само изображение логотипа
+	img{
+		// width: auto;
+		margin: 0 auto;
+	}
+	// Подзаголовок карточки
+	.title-wrapper{
+		margin-bottom: 20px;
+		text-decoration: underline;
+		color: $color_link;
+		font-size: 20px;
+		font-weight: 900;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	// Тело карточки
+	.description-wrapper{
+		font-weight: 300;
+		line-height: 1.4;
+		color: #999;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+}
+//=====================================
+//=End of Информационные ресурсы Drupal
+//=====================================
+
+//=====================================
+//=Блок с вебформой ПОЛУЧИТЕ ПЕРСОНАЛЬНУЮ КОНСУЛЬТАЦИЮ ИЛИ ПОМОЩЬ ПО ВОПРОСАМ, КАСАЮЩИМСЯ DRUPAL
+//=====================================
+#block-3,
+#block-askaquestion {
+	background-image: url('../images/bg/webform-block-bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.paragraph--type--text-and-webform{
+	color: $color_alt;
+	.paragraphs--inner{
+		display: flex;
+		justify-content: space-between;
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			flex-wrap: wrap;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			flex-wrap: wrap;
+		}
+	}
+	// Левая сторона содержит заголовок со span внутри
+	.leftside{
+		max-width: 625px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			max-width: 500px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			margin-right: 40px;
+			max-width: unset;
+			flex: 1 1px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			margin-bottom: 20px;
+			max-width: unset;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			max-width: unset;
+			margin-bottom: 15px;
+		}
+	}
+	// Подзаголовок блока
+	.field--name-field-subtitle{
+		color: #ffffff;
+		font-size: 40px;
+		line-height: 1.4;
+		font-weight: 100;
+		margin-bottom: 40px;
+		@extend %uppercase;
+		strong{
+			font-weight: 900;
+		}
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 30px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 28px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 20px;
+			margin-bottom: 10px;
+			line-height: 1.1;
+		}
+	}
+	// Description блока
+	.field--name-field-body{
+		font-size: 20px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 18px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 16px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+	// правая сторона содержит webform
+	.rightside{
+		max-width: 400px;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			max-width: 300px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			max-width: unset;	
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			max-width: unset;	
+		}
+	}	
+}
+
+// WebForm
+#webform-submission-ask-a-question-paragraph-18-form{
+	@extend %white-webform;
+}
+// Кнопка в вебформе
+#edit-webform-button-submit{
+	@extend %white-button;
+}
+// Обертка кнопки в вебформе
+#edit-webform-button{
+	margin-top: 20px;
+}
+
+//=====================================
+//=End of Блок с вебформой ПОЛУЧИТЕ ПЕРСОНАЛЬНУЮ КОНСУЛЬТАЦИЮ ИЛИ ПОМОЩЬ ПО ВОПРОСАМ, КАСАЮЩИМСЯ DRUPAL
+//=====================================
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//=== FOOTER
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//=====================================
+//=Footer
+//=====================================
+.region-footer{
+	.region-inner{
+		display: flex;
+		justify-content: space-between;
+		max-width: 1170px;
+		margin: 0 auto;
+		padding: 40px 0;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 10px;
+			padding-right: 10px;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+//=====================================
+//=End of Footer
+//=====================================
+
+
+//=====================================
+//=Брэндинг в футере
+//=====================================
+#block-classier-branding{
+	@at-root .region-footer & {
+		max-width: 350px;
+	}
+
+	max-width: 310px;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		max-width: 280px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		max-width: 280px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		max-width: nonene;
+		margin-bottom: 20px;
+	}
+	.block-content{
+		display: flex;
+		justify-content: space-between;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	#site-logo-wrapper{
+		margin-right: 20px;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			margin-right: 15px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			margin-right: 10px;
+			max-width: 40px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			margin-right: 10px;
+			max-width: 50px;
+		}
+	}
+	#site-name-and-slogan{
+		flex: 1 1px;
+	}
+	.site-name{
+		color: $color_title;
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 15px;
+		@extend %uppercase;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+	}
+	.site-slogan{
+		font-weight: 300;
+		line-height: 1.5;
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 12px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+	}
+	a{
+		color: inherit;
+		text-decoration: none;
+	}
+}
+//=====================================
+//=End of Брэндинг в футере
+//=====================================
+
+//=====================================
+//=Текстовой блок в футере
+//=====================================
+#block-11{
+	max-width: 280px;
+	text-align: right;
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		max-width: 320px;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 14px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 12px;
+		max-width: 220px;
+		font-weight: 300;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 12px;
+		max-width: none;
+		text-align: left;
+	}
+	.block-content{
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	.links-wrapper{
+		color: $color_link;
+		font-weight: 500;
+	}
+	a{
+		text-decoration: underline;
+		text-decoration-color: rgba($color_link, 0.1);
+		&:hover{
+			text-decoration-color: $color_link;
+		}
+	}
+}
+//=====================================
+//=End of Текстовой блок в футере
+//=====================================
+
+
+
+//=====================================
+//=Copyright
+//=====================================
+.region-copyright{
+	border-top: 1px solid #d1d1d1;
+	.region-inner{
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		max-width: 1170px;
+		margin: 0 auto;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+}
+//=====================================
+//=End of Copyright
+//=====================================
+
+//=====================================
+//=Русскоязычное сообщество Drupal, 2017
+//=====================================
+#block-4{
+	font-weight: 300;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 14px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 12px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 12px;
+	}
+	.block-content{
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+//=====================================
+//=End of Русскоязычное сообщество Drupal, 2017
+//=====================================
+
+//=====================================
+//=Email для связи promo@dru.io
+//=====================================
+#block-5{
+	font-weight: 300;
+	text-align: right;
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		font-size: 14px;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		font-size: 12px;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		font-size: 12px;
+	}
+	a{
+		color: $color_link;
+		font-weight: 500;
+		text-decoration: underline;
+		text-decoration-color: rgba($color_link, 0.1);
+		&:hover{
+			text-decoration-color: $color_link;
+		}
+	}
+}
+//=====================================
+//=End of Email для связи promo@dru.io
+//=====================================
+
+//=====================================
+//=Всплывающее сообщение
+//=====================================
+.messages{
+	display: none;
+	z-index: 9999;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: $color_alt;
+	box-shadow: -8px 0 0 $color_link;
+	color: $color_style;
+	background-image: none;
+	padding-left: 20px;
+}
+.messages.active{
+	display: block;
+}
+//=====================================
+//=End of Всплывающее сообщение
+//=====================================
+
+//=====================================
+//=Страница - Положение о защите персональных данных
+//=====================================
+.path-privacy-policy{
+	h1{
+		color: $color_title;
+		font-family: $font_title;
+		font-size: 42px;
+		font-weight: 900;
+		line-height: 1.3;
+		@extend %uppercase;
+		margin-bottom: 30px;
+		@media screen and (min-width: 980px) and (max-width: 1179px) {
+			font-size: 32px;
+		}
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 26px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 24px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 20px;
+		}
+	}
+	p{
+		@media screen and (min-width: 768px) and (max-width: 979px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 480px) and (max-width: 767px) {
+			font-size: 14px;
+		}
+		@media screen and (min-width: 1px) and (max-width: 479px) {
+			font-size: 12px;
+		}
+		strong{
+			font-size: 18px;
+			color: $color_title;
+			line-height: 1.3;
+			@media screen and (min-width: 480px) and (max-width: 767px) {
+				font-size: 16px;
+			}
+			@media screen and (min-width: 1px) and (max-width: 479px) {
+				font-size: 16px;
+			}
+		}
+	}
+}
+//=====================================
+//=End of Страница - Положение о защите персональных данных
+//=====================================
+
+
+//=====================================
+//=Back To Top
+//=====================================
+#backtotop{
+	@media screen and (min-width: 980px) and (max-width: 1179px) {
+		display: none !important;
+		opacity: 0 !important;
+	}
+	@media screen and (min-width: 768px) and (max-width: 979px) {
+		display: none !important;
+		opacity: 0 !important;
+	}
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		display: none !important;
+		opacity: 0 !important;
+	}
+	@media screen and (min-width: 1px) and (max-width: 479px) {
+		display: none !important;
+		opacity: 0 !important;
+	}
+}
+//=====================================
+//=End of Back To Top
+//=====================================
+
+
+//=====================================
+//=animation for D R U P A L
+//=====================================
+// @keyframes fadeInUp-01 {
+// 	from {
+// 		opacity: 0;
+// 		transform: translate3d(0, 100%, 0);
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		transform: none;
+// 	}
+// }
+
+.fadeInUp-01 {
+	@media screen and (min-width: 1180px) {
+		animation-name: fadeInUp;		
+	}
+}
+.fadeInUp-02 {
+	@media screen and (min-width: 1180px) {
+		animation-name: fadeInUp;		
+		animation-delay: 0.1s;
+	}
+}
+.fadeInUp-03 {
+	@media screen and (min-width: 1180px) {
+		animation-name: fadeInUp;		
+		animation-delay: 0.2s;
+	}
+}
+.fadeInUp-04 {
+	@media screen and (min-width: 1180px) {
+		animation-name: fadeInUp;		
+		animation-delay: 0.3s;
+	}
+}
+.fadeInUp-05 {
+	@media screen and (min-width: 1180px) {
+		animation-name: fadeInUp;		
+		animation-delay: 0.4s;
+	}
+}
+.fadeInUp-06 {
+	@media screen and (min-width: 1180px) {
+		animation-name: fadeInUp;		
+		animation-delay: 0.5s;
+	}
+}
+//=====================================
+//=End of animation for D R U P A L
+//=====================================
+
+//=====================================
+//=animation
+//=====================================
+@keyframes motion {
+	0% {
+		background-position: 0 0;
+		background-size: 200%;
+	}
+	17% {
+		background-position: 20% 40%;
+		background-size: 166%;
+	}
+	35% {
+		background-position: 60% 70%;
+		background-size: 133%;
+	}
+	50% {
+		background-position: 100% 100%;
+		background-size: 100%;
+	}
+	65% {
+		background-position: 80% 40%;
+		background-size: 133%;
+	}
+	83% {
+		background-position: 50% 20%;
+		background-size: 166%;
+	}
+	100% {
+		background-position: 0 0;
+		background-size: 200%;
+	}
+}
+//=====================================
+//=End of animation
+//=====================================
+
+//=====================================
+//=Скрытый якорь
+//=====================================
+.field--name-field-hidden-anchor{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	color: transparent;
+	font-size: 0;
+}
+//=====================================
+//=End of Скрытый якорь
+//=====================================

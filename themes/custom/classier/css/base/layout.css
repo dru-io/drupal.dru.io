@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|PT+Sans:400,700&subset=cyrillic");
+body {
+  margin: 0;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.5; }
+
+p, h1, h2, h3, h4, h5, ul, li {
+  margin: 0; }
+
+ul {
+  padding: 0; }
+
+#block-views-block-katalog-block-1-2 div {
+  width: auto;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) and (max-width: 1179px) {
+    #block-views-block-katalog-block-1-2 div {
+      padding-left: 20px;
+      padding-right: 20px; } }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    #block-views-block-katalog-block-1-2 div {
+      padding-left: 10px;
+      padding-right: 10px; } }
+
+#block-views-block-katalog-block-1-2 h2 {
+  color: skyblue; }
+
+/*# sourceMappingURL=css/global.css.map */

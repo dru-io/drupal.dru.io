@@ -12,7 +12,6 @@ error_log
 actions/*
 modules/contrib/*
 **/.css.map
-themes/*
 .well-known
 #default files
 .csslintrc

@@ -1,0 +1,8 @@
+.classier-article footer {
+  text-align: center;
+  border-top: 1px dashed;
+  border-bottom: 1px dashed;
+  font-style: italic;
+  font-size: 0.8em;
+  background-color: #ddd;
+}

@@ -1,0 +1,21 @@
+.view-advantages-drupal .left_side {
+	margin-right: 25px;
+	/* max-width: 70px; */
+	margin-right: 20px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 0;
+	opacity: 0.4;
+}
+
+.view-advantages-drupal .right_side {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1px;
+	-ms-flex: 1 1px;
+	flex: 1 1px;
+	position: relative;
+	z-index: 1;
+}
+
