@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+ #}
+ {%
+ set body_classes = [
+ logged_in ? 'user-logged-in',
+ root_path ? 'path-' ~ root_path|clean_class,
+ root_path ? 'not-front' : 'front',
+ node_type ? 'page-node-type-' ~ node_type|clean_class,
+ db_offline ? 'db-offline',
+ not page.sidebar_first and not page.sidebar_second ? 'no-sidebars',
+ page.sidebar_first and not page.sidebar_second ? 'sidebar-first',
+ page.sidebar_second and not page.sidebar_first ? 'sidebar-second',
+ page.sidebar_first and page.sidebar_second ? 'both-sidebars',
+ ]
+ %}
+ <!DOCTYPE html>
+ <html{{ html_attributes }}>
+ <head>
+  <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+      <js-placeholder token="{{ placeholder_token }}">
+      </head>
+      <body{{ attributes.addClass(body_classes) }}>
+    {#
+      Keyboard navigation/accessibility link to main content section in
+      page.html.twig.
+      #}
+      <a href="#main-content" class="visually-hidden focusable skip-link">
+        {{ 'Skip to main content'|t }}
+      </a>
+      {{ page_top }}
+      {{ page }}
+      {{ page_bottom }}
+      <js-bottom-placeholder token="{{ placeholder_token }}">
+        <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter45466095 = new Ya.Metrika({ id:45466095, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/45466095" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+      </body>
+      </html>
