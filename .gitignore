@@ -25,4 +25,8 @@ README.txt
 autoload.php
 index.php
 composer.lock
+example.gitignore
+.gitattributes
 
+.idea
+sites/default/services*.yml
