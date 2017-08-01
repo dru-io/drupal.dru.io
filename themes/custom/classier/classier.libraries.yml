@@ -4,16 +4,30 @@ global-styling:
       css/modules/bylines.css: {}
       css/style.css: {}
       css/animate.css: {}
-
+  # Temporary. All this JS's will be removed.
   js:
-    js/jquery.ui.js: {}
     js/blazy-fix.js: {}
     js/menu.js: {}
     js/message.js: {}
-    js/other.js: {}
-    js/viewportchecker.js: {}
+  dependencies:
+    - classier/animations
+
+animations:
+  version: VERSION
+  js:
     js/anim.js: {}
+  dependencies:
+    - classier/viewportchecker
 
-
-
-
+# Third party libraries required for theming.
+viewportchecker:
+  version: VERSION
+  remote: https://github.com/dirkgroenen/jQuery-viewport-checker
+  license:
+    name: MIT
+    url: https://en.wikipedia.org/wiki/MIT_License
+    gpl-compatible: true
+  js:
+    /libraries/viewportchecker/viewportchecker.js: { }
+  dependencies:
+    - core/jquery
