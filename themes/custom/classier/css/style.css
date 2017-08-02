@@ -321,9 +321,9 @@ h2 {
     margin-top: 1px;
     margin-bottom: 1px; }
 
-.field--name-field-title span, .field--name-field-title strong, h2, .field--name-field-subtitle, .field--name-field-body span, .path-user #edit-submit, #edit-webform-button-submit, .path-user #block-classier-page-title, #block-7 .field--name-field-title, #block-8 .field--name-body span,
-#block-9 .field--name-body span,
-#block-10 .field--name-body span, .view-information-resource-drupal .title-of-view, .paragraph--type--text-and-webform .field--name-field-subtitle, #block-classier-branding .site-name, .path-privacy-policy h1 {
+.field--name-field-title span, .field--name-field-title strong, h2, .field--name-field-subtitle, .field--name-field-body span, .path-user #edit-submit, #edit-webform-button-submit, .path-user #block-classier-page-title, #block-why-drupal .field--name-field-title, #block-proven-solution .field--name-body span,
+#block-optimal-choice .field--name-body span,
+#block-support .field--name-body span, .view-information-resource-drupal .title-of-view, .paragraph--type--text-and-webform .field--name-field-subtitle, #block-classier-branding .site-name, .path-privacy-policy h1 {
   text-transform: uppercase;
   letter-spacing: 0.06em; }
 
@@ -817,7 +817,7 @@ ul.menu {
       display: none; } }
 
 /* end of Гамбургер */
-#block-7 {
+#block-why-drupal {
   padding-top: 210px;
   padding-bottom: 135px;
   font-family: "Open Sans";
@@ -825,14 +825,14 @@ ul.menu {
   background-position: center 0;
   background-repeat: no-repeat; }
   @media screen and (min-width: 1180px) {
-    #block-7 {
+    #block-why-drupal {
       background-attachment: fixed;
       -webkit-animation: motion 70s linear infinite;
       animation: motion 70s linear infinite;
       -webkit-background-size: 200% 200%;
       background-size: 200%; } }
   @media screen and (min-width: 980px) and (max-width: 1179px) {
-    #block-7 {
+    #block-why-drupal {
       padding-top: 170px;
       padding-bottom: 100px;
       -webkit-animation: motion 70s linear infinite;
@@ -840,7 +840,7 @@ ul.menu {
       -webkit-background-size: 200% 200%;
       background-size: 200%; } }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-7 {
+    #block-why-drupal {
       padding-top: 110px;
       padding-bottom: 60px;
       -webkit-animation: motion 70s linear infinite;
@@ -848,55 +848,55 @@ ul.menu {
       -webkit-background-size: 200% 200%;
       background-size: 200%; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-7 {
+    #block-why-drupal {
       padding-top: 120px;
       padding-bottom: 70px; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-7 {
+    #block-why-drupal {
       padding-top: 90px;
       padding-bottom: 30px;
       -webkit-background-size: 200% 200%;
       background-size: 200%; } }
-  #block-7 .block-content {
+  #block-why-drupal .block-content {
     max-width: 600px; }
     @media screen and (min-width: 980px) and (max-width: 1179px) {
-      #block-7 .block-content {
+      #block-why-drupal .block-content {
         max-width: 535px;
         padding-left: 0;
         padding-right: 0; } }
     @media screen and (min-width: 768px) and (max-width: 979px) {
-      #block-7 .block-content {
+      #block-why-drupal .block-content {
         max-width: 440px;
         padding-left: 0;
         padding-right: 0; } }
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      #block-7 .block-content {
+      #block-why-drupal .block-content {
         max-width: 330px;
         padding-left: 0;
         padding-right: 0; } }
     @media screen and (min-width: 1px) and (max-width: 479px) {
-      #block-7 .block-content {
+      #block-why-drupal .block-content {
         padding-left: 0;
         padding-right: 0;
         max-width: 200px; } }
-  #block-7 .field--name-field-title {
+  #block-why-drupal .field--name-field-title {
     font-family: Open Sans;
     font-size: 30px;
     font-weight: 700;
     color: #fff; }
     @media screen and (min-width: 980px) and (max-width: 1179px) {
-      #block-7 .field--name-field-title {
+      #block-why-drupal .field--name-field-title {
         font-size: 24px; } }
     @media screen and (min-width: 768px) and (max-width: 979px) {
-      #block-7 .field--name-field-title {
+      #block-why-drupal .field--name-field-title {
         font-size: 20px; } }
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      #block-7 .field--name-field-title {
+      #block-why-drupal .field--name-field-title {
         font-size: 18px; } }
     @media screen and (min-width: 1px) and (max-width: 479px) {
-      #block-7 .field--name-field-title {
+      #block-why-drupal .field--name-field-title {
         font-size: 12px; } }
-    #block-7 .field--name-field-title strong {
+    #block-why-drupal .field--name-field-title strong {
       font-size: 184px;
       text-transform: none;
       letter-spacing: normal;
@@ -906,65 +906,65 @@ ul.menu {
       margin-top: -10px;
       margin-bottom: 35px; }
       @media screen and (min-width: 980px) and (max-width: 1179px) {
-        #block-7 .field--name-field-title strong {
+        #block-why-drupal .field--name-field-title strong {
           font-size: 164px; } }
       @media screen and (min-width: 768px) and (max-width: 979px) {
-        #block-7 .field--name-field-title strong {
+        #block-why-drupal .field--name-field-title strong {
           font-size: 130px; } }
       @media screen and (min-width: 480px) and (max-width: 767px) {
-        #block-7 .field--name-field-title strong {
+        #block-why-drupal .field--name-field-title strong {
           font-size: 100px;
           margin-left: -6px; } }
       @media screen and (min-width: 1px) and (max-width: 479px) {
-        #block-7 .field--name-field-title strong {
+        #block-why-drupal .field--name-field-title strong {
           font-size: 60px;
           margin-bottom: 10px;
           margin-left: -4px; } }
-      #block-7 .field--name-field-title strong span {
+      #block-why-drupal .field--name-field-title strong span {
         display: inline-block;
         font-size: 50px;
         position: absolute;
         top: 0;
         right: 0; }
         @media screen and (min-width: 980px) and (max-width: 1179px) {
-          #block-7 .field--name-field-title strong span {
+          #block-why-drupal .field--name-field-title strong span {
             font-size: 46px; } }
         @media screen and (min-width: 768px) and (max-width: 979px) {
-          #block-7 .field--name-field-title strong span {
+          #block-why-drupal .field--name-field-title strong span {
             font-size: 36px; } }
         @media screen and (min-width: 480px) and (max-width: 767px) {
-          #block-7 .field--name-field-title strong span {
+          #block-why-drupal .field--name-field-title strong span {
             font-size: 34px; } }
         @media screen and (min-width: 1px) and (max-width: 479px) {
-          #block-7 .field--name-field-title strong span {
+          #block-why-drupal .field--name-field-title strong span {
             font-size: 22px; } }
-  #block-7 .field--name-body {
+  #block-why-drupal .field--name-body {
     font-size: 24px;
     max-width: 375px;
     text-transform: lowercase; }
     @media screen and (min-width: 980px) and (max-width: 1179px) {
-      #block-7 .field--name-body {
+      #block-why-drupal .field--name-body {
         font-size: 20px; } }
     @media screen and (min-width: 768px) and (max-width: 979px) {
-      #block-7 .field--name-body {
+      #block-why-drupal .field--name-body {
         font-size: 18px; } }
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      #block-7 .field--name-body {
+      #block-why-drupal .field--name-body {
         font-size: 16px; } }
     @media screen and (min-width: 1px) and (max-width: 479px) {
-      #block-7 .field--name-body {
+      #block-why-drupal .field--name-body {
         font-size: 12px; } }
 
-#block-1 {
+#block-what-is-drupal {
   padding: 110px 0 120px; }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-1 {
+    #block-what-is-drupal {
       padding: 90px 0 100px; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-1 {
+    #block-what-is-drupal {
       padding: 40px 0 50px; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-1 {
+    #block-what-is-drupal {
       padding: 40px 0 50px; } }
 
 .paragraph--type--text-and-video .paragraphs--inner {
@@ -1044,25 +1044,25 @@ ul.menu {
         border-width: 4px;
         height: 60vw; } }
 
-#block-13 {
+#block-achievements {
   background-image: -webkit-gradient(linear, left top, right top, from(#716efc), color-stop(52%, #6b8aff), to(#67bdff));
   background-image: -webkit-linear-gradient(left, #716efc 0%, #6b8aff 52%, #67bdff 100%);
   background-image: -o-linear-gradient(left, #716efc 0%, #6b8aff 52%, #67bdff 100%);
   background-image: linear-gradient(to right, #716efc 0%, #6b8aff 52%, #67bdff 100%);
   padding: 70px 0; }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-13 {
+    #block-achievements {
       padding: 50px 0; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-13 {
+    #block-achievements {
       padding: 40px 0; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-13 {
+    #block-achievements {
       padding: 25px 0;
       background-image: -webkit-linear-gradient(26deg, #716efc 0%, #6b8aff 8%, #67bdff 100%);
       background-image: -o-linear-gradient(26deg, #716efc 0%, #6b8aff 8%, #67bdff 100%);
       background-image: linear-gradient(64deg, #716efc 0%, #6b8aff 8%, #67bdff 100%); } }
-  #block-13 .field--name-field-paragraph {
+  #block-achievements .field--name-field-paragraph {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1072,16 +1072,16 @@ ul.menu {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      #block-13 .field--name-field-paragraph {
+      #block-achievements .field--name-field-paragraph {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
     @media screen and (min-width: 1px) and (max-width: 479px) {
-      #block-13 .field--name-field-paragraph {
+      #block-achievements .field--name-field-paragraph {
         -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap; } }
-    #block-13 .field--name-field-paragraph > .field__item {
+    #block-achievements .field--name-field-paragraph > .field__item {
       width: 145px;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1094,31 +1094,31 @@ ul.menu {
       -webkit-box-sizing: border-box;
       box-sizing: border-box; }
       @media screen and (min-width: 768px) and (max-width: 979px) {
-        #block-13 .field--name-field-paragraph > .field__item {
+        #block-achievements .field--name-field-paragraph > .field__item {
           width: 100px; } }
       @media screen and (min-width: 480px) and (max-width: 767px) {
-        #block-13 .field--name-field-paragraph > .field__item {
+        #block-achievements .field--name-field-paragraph > .field__item {
           width: 32%;
           padding-left: 10px;
           padding-right: 10px;
           margin-bottom: 35px; } }
       @media screen and (min-width: 1px) and (max-width: 479px) {
-        #block-13 .field--name-field-paragraph > .field__item {
+        #block-achievements .field--name-field-paragraph > .field__item {
           width: 49%;
           padding-left: 10px;
           padding-right: 10px;
           margin-bottom: 30px; } }
-    #block-13 .field--name-field-paragraph > .field__item:nth-child(1) {
+    #block-achievements .field--name-field-paragraph > .field__item:nth-child(1) {
       background-image: url("../images/bg/D.png"); }
-    #block-13 .field--name-field-paragraph > .field__item:nth-child(2) {
+    #block-achievements .field--name-field-paragraph > .field__item:nth-child(2) {
       background-image: url("../images/bg/R.png"); }
-    #block-13 .field--name-field-paragraph > .field__item:nth-child(3) {
+    #block-achievements .field--name-field-paragraph > .field__item:nth-child(3) {
       background-image: url("../images/bg/U.png"); }
-    #block-13 .field--name-field-paragraph > .field__item:nth-child(4) {
+    #block-achievements .field--name-field-paragraph > .field__item:nth-child(4) {
       background-image: url("../images/bg/P.png"); }
-    #block-13 .field--name-field-paragraph > .field__item:nth-child(5) {
+    #block-achievements .field--name-field-paragraph > .field__item:nth-child(5) {
       background-image: url("../images/bg/A.png"); }
-    #block-13 .field--name-field-paragraph > .field__item:nth-child(6) {
+    #block-achievements .field--name-field-paragraph > .field__item:nth-child(6) {
       background-image: url("../images/bg/L.png"); }
 
 .paragraph--type--achievement-paragraph {
@@ -1176,28 +1176,28 @@ ul.menu {
       .paragraph--type--achievement-paragraph .field--name-field-sign {
         height: 70px; } }
 
-#block-8,
-#block-9,
-#block-10 {
+#block-proven-solution,
+#block-optimal-choice,
+#block-support {
   padding: 90px 0; }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-8,
-    #block-9,
-    #block-10 {
+    #block-proven-solution,
+    #block-optimal-choice,
+    #block-support {
       padding: 70px 0; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-8,
-    #block-9,
-    #block-10 {
+    #block-proven-solution,
+    #block-optimal-choice,
+    #block-support {
       padding: 50px 0; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-8,
-    #block-9,
-    #block-10 {
+    #block-proven-solution,
+    #block-optimal-choice,
+    #block-support {
       padding: 50px 0; } }
-  #block-8 .block-content,
-  #block-9 .block-content,
-  #block-10 .block-content {
+  #block-proven-solution .block-content,
+  #block-optimal-choice .block-content,
+  #block-support .block-content {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1207,75 +1207,75 @@ ul.menu {
     -ms-flex-pack: justify;
     justify-content: space-between; }
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      #block-8 .block-content,
-      #block-9 .block-content,
-      #block-10 .block-content {
+      #block-proven-solution .block-content,
+      #block-optimal-choice .block-content,
+      #block-support .block-content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column; } }
     @media screen and (min-width: 1px) and (max-width: 479px) {
-      #block-8 .block-content,
-      #block-9 .block-content,
-      #block-10 .block-content {
+      #block-proven-solution .block-content,
+      #block-optimal-choice .block-content,
+      #block-support .block-content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column; } }
-  #block-8 .field--name-field-title,
-  #block-9 .field--name-field-title,
-  #block-10 .field--name-field-title {
+  #block-proven-solution .field--name-field-title,
+  #block-optimal-choice .field--name-field-title,
+  #block-support .field--name-field-title {
     width: 43%; }
     @media screen and (min-width: 768px) and (max-width: 979px) {
-      #block-8 .field--name-field-title,
-      #block-9 .field--name-field-title,
-      #block-10 .field--name-field-title {
+      #block-proven-solution .field--name-field-title,
+      #block-optimal-choice .field--name-field-title,
+      #block-support .field--name-field-title {
         width: 47%; } }
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      #block-8 .field--name-field-title,
-      #block-9 .field--name-field-title,
-      #block-10 .field--name-field-title {
+      #block-proven-solution .field--name-field-title,
+      #block-optimal-choice .field--name-field-title,
+      #block-support .field--name-field-title {
         width: 100%;
         margin-bottom: 30px; } }
     @media screen and (min-width: 1px) and (max-width: 479px) {
-      #block-8 .field--name-field-title,
-      #block-9 .field--name-field-title,
-      #block-10 .field--name-field-title {
+      #block-proven-solution .field--name-field-title,
+      #block-optimal-choice .field--name-field-title,
+      #block-support .field--name-field-title {
         width: 100%;
         margin-bottom: 10px; } }
-  #block-8 .field--name-body,
-  #block-9 .field--name-body,
-  #block-10 .field--name-body {
+  #block-proven-solution .field--name-body,
+  #block-optimal-choice .field--name-body,
+  #block-support .field--name-body {
     width: 45%;
     font-size: 20px;
     font-weight: 300; }
     @media screen and (min-width: 980px) and (max-width: 1179px) {
-      #block-8 .field--name-body,
-      #block-9 .field--name-body,
-      #block-10 .field--name-body {
+      #block-proven-solution .field--name-body,
+      #block-optimal-choice .field--name-body,
+      #block-support .field--name-body {
         font-size: 18px; } }
     @media screen and (min-width: 768px) and (max-width: 979px) {
-      #block-8 .field--name-body,
-      #block-9 .field--name-body,
-      #block-10 .field--name-body {
+      #block-proven-solution .field--name-body,
+      #block-optimal-choice .field--name-body,
+      #block-support .field--name-body {
         font-size: 16px; } }
     @media screen and (min-width: 480px) and (max-width: 767px) {
-      #block-8 .field--name-body,
-      #block-9 .field--name-body,
-      #block-10 .field--name-body {
+      #block-proven-solution .field--name-body,
+      #block-optimal-choice .field--name-body,
+      #block-support .field--name-body {
         font-size: 14px;
         width: 100%; } }
     @media screen and (min-width: 1px) and (max-width: 479px) {
-      #block-8 .field--name-body,
-      #block-9 .field--name-body,
-      #block-10 .field--name-body {
+      #block-proven-solution .field--name-body,
+      #block-optimal-choice .field--name-body,
+      #block-support .field--name-body {
         font-size: 12px;
         width: 100%; } }
-    #block-8 .field--name-body span,
-    #block-9 .field--name-body span,
-    #block-10 .field--name-body span {
+    #block-proven-solution .field--name-body span,
+    #block-optimal-choice .field--name-body span,
+    #block-support .field--name-body span {
       font-weight: 700;
       display: block; }
 

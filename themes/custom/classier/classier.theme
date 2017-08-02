@@ -31,7 +31,7 @@ function classier_preprocess_block(&$variables) {
     $query->condition('b.uuid', $uuid);
     $id = $query->execute()->fetchField();
 
-    $variables['attributes']['id'] = 'block-' . $id;
+    $variables['attributes']['data-id'] = 'block-' . $id;
   }
 }
 
