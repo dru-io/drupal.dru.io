@@ -9,8 +9,6 @@ global-styling:
     js/blazy-fix.js: {}
     js/menu.js: {}
     js/message.js: {}
-  dependencies:
-    - classier/animations
 
 animations:
   version: VERSION
