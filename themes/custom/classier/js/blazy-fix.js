@@ -1,15 +1,24 @@
-/*Этот скрипт переносит фоновое изображение из блока blazy в родительский блок*/
-
-(function ($, Drupal, drupalSettings) {
+/**
+ * @file
+ * Blazy fix behaviors.
+ */
+(function ($, window, Drupal) {
 
   'use strict';
 
-	$(document).ready(function() {
-		$(".media--blazy").each(function(){ // Перебираем все blazy блоки
-		    var bg = $(this).attr("data-src"); // Извлекаем путь к изображению.
-		    $(this).closest(".block").css('background-image', 'url(' + bg + ')'); // Задаем фоновое изображение родительскому блоку.
-		    $(this).closest(".blazy").remove(); // Удаляем из html блок с blazy
-		});
-	}); 	  
-	  
-})(jQuery, Drupal, drupalSettings);
+  /**
+   * Move background image to parent .block element.
+   */
+  Drupal.behaviors.blazy_fix_image = {
+    attach: function (context, settings) {
+
+      $('.media--blazy').once().each(function () {
+        const background = $(this).attr('data-src');
+        $(this).closest('.block').css('background-image', 'url(' + background + ')');
+        $(this).closest('.blazy').remove();
+      });
+
+    }
+  };
+
+})(jQuery, window, Drupal);

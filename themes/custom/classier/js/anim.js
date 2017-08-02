@@ -155,6 +155,7 @@
           classToRemove: 'hidden-anim',
           offset: 300
         });
+
     }
   };
 

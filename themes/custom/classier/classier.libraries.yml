@@ -5,10 +5,31 @@ global-styling:
       css/style.css: {}
       css/animate.css: {}
   # Temporary. All this JS's will be removed.
+  dependencies:
+    - classier/blazy-fix
+
+menu:
+  version: VERSION
+  js:
+    js/menu.js: {}
+  dependencies:
+    - core/jquery
+
+message:
+  version: VERSION
+  js:
+    js/message.js: {}
+  dependencies:
+    - core/jquery
+
+# @todo attach by condition on main blazy library.
+blazy-fix:
+  version: VERSION
   js:
     js/blazy-fix.js: {}
-    js/menu.js: {}
-    js/message.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
 
 animations:
   version: VERSION

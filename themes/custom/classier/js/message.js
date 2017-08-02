@@ -1,19 +1,24 @@
-(function ($, Drupal, drupalSettings) {
+/**
+ * @file
+ * Message in pop-up behaviors.
+ */
+
+(function ($, window, Drupal) {
 
   'use strict';
-  
- function remove() {
-  $(".messages").removeClass("active");
-}
- 
-$(document).ready(function () {
-    if ($(".messages").html() !== "undefined") {
-        $(window).load(function () {
-            $(".messages").addClass("active");
-            setTimeout(remove, 6000);
-        });        
+
+  Drupal.behaviors.status_message_popup = {
+    attach: function (context, settings) {
+
+      if ($('.messages').length) {
+        $('.messages').addClass('active');
+
+        setTimeout(function () {
+          $('.messages').removeClass('active');
+        }, 6000);
+      }
+
     }
-});
-    
-    
-})(jQuery, Drupal, drupalSettings);
+  };
+
+})(jQuery, window, Drupal);
