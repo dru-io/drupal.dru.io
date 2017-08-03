@@ -1,8 +1,8 @@
 //=====================================
 //=Подключаем шрифты
-//=====================================
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800'); // Open Sans
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700'); // Ubuntu
+//====================================
+@import "../../fonts/opensans/opensans.css";
+@import "../../fonts/ubuntu/ubuntu.css";
 @font-face{
 	font-family: 'Neris';
 	src: url('../../fonts/neris/Neris-Black.otf');
@@ -2413,7 +2413,7 @@ ul.menu{
 //=====================================
 //=Текстовой блок в футере
 //=====================================
-#block-11{
+#block-footer-sign {
 	max-width: 280px;
 	text-align: right;
 	@media screen and (min-width: 980px) and (max-width: 1179px) {
@@ -2509,7 +2509,7 @@ ul.menu{
 //=====================================
 //=Русскоязычное сообщество Drupal, 2017
 //=====================================
-#block-4{
+#block-copyright {
 	font-weight: 300;
 	@media screen and (min-width: 768px) and (max-width: 979px) {
 		font-size: 14px;

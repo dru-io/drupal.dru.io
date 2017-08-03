@@ -1,6 +1,6 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,800");
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+@import url(../../fonts/opensans/opensans.css);
+@import url(../../fonts/ubuntu/ubuntu.css);
 @font-face {
   font-family: 'Neris';
   src: url("../../fonts/neris/Neris-Black.otf");
@@ -2098,49 +2098,49 @@ ul.menu {
     color: inherit;
     text-decoration: none; }
 
-#block-11 {
+#block-footer-sign {
   max-width: 280px;
   text-align: right; }
   @media screen and (min-width: 980px) and (max-width: 1179px) {
-    #block-11 {
+    #block-footer-sign {
       max-width: 320px; } }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-11 {
+    #block-footer-sign {
       font-size: 14px; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-11 {
+    #block-footer-sign {
       font-size: 12px;
       max-width: 220px;
       font-weight: 300; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-11 {
+    #block-footer-sign {
       font-size: 12px;
       max-width: none;
       text-align: left; } }
   @media screen and (min-width: 980px) and (max-width: 1179px) {
-    #block-11 .block-content {
+    #block-footer-sign .block-content {
       padding-left: 0;
       padding-right: 0; } }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-11 .block-content {
+    #block-footer-sign .block-content {
       padding-left: 0;
       padding-right: 0; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-11 .block-content {
+    #block-footer-sign .block-content {
       padding-left: 0;
       padding-right: 0; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-11 .block-content {
+    #block-footer-sign .block-content {
       padding-left: 0;
       padding-right: 0; } }
-  #block-11 .links-wrapper {
+  #block-footer-sign .links-wrapper {
     color: #67bdff;
     font-weight: 500; }
-  #block-11 a {
+  #block-footer-sign a {
     text-decoration: underline;
     -webkit-text-decoration-color: rgba(103, 189, 255, 0.1);
     text-decoration-color: rgba(103, 189, 255, 0.1); }
-    #block-11 a:hover {
+    #block-footer-sign a:hover {
       -webkit-text-decoration-color: #67bdff;
       text-decoration-color: #67bdff; }
 
@@ -2180,31 +2180,31 @@ ul.menu {
         padding-top: 15px;
         padding-bottom: 15px; } }
 
-#block-4 {
+#block-copyright {
   font-weight: 300; }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-4 {
+    #block-copyright {
       font-size: 14px; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-4 {
+    #block-copyright {
       font-size: 12px; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-4 {
+    #block-copyright {
       font-size: 12px; } }
   @media screen and (min-width: 980px) and (max-width: 1179px) {
-    #block-4 .block-content {
+    #block-copyright .block-content {
       padding-left: 0;
       padding-right: 0; } }
   @media screen and (min-width: 768px) and (max-width: 979px) {
-    #block-4 .block-content {
+    #block-copyright .block-content {
       padding-left: 0;
       padding-right: 0; } }
   @media screen and (min-width: 480px) and (max-width: 767px) {
-    #block-4 .block-content {
+    #block-copyright .block-content {
       padding-left: 0;
       padding-right: 0; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
-    #block-4 .block-content {
+    #block-copyright .block-content {
       padding-left: 0;
       padding-right: 0; } }
 
