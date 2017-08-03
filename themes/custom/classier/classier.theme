@@ -1,60 +1,14 @@
 <?php
 
-// Necessary to ensure proper HTML classes.
-use Drupal\Component\Utility\Html;
-
 /**
- * Implements hook_preprocess_node().
+ * @file
+ * Custom hooks and functions special for theme.
+ *
+ * Hooks are included from files.
  */
-function classier_preprocess_node__article(&$variables) {
-  // Get a convenient $node variable;
-  $node = $variables['node'];
 
-  // Get the tags and their values.
-  $field_tags = $node->field_tags;
-  foreach ($field_tags->referencedEntities() as $tag) {
-    $variables['attributes']['class'][] = Html::getClass('term-' . $tag->name->value);
-  }
-}
-
-/**
- * Implements hook_preprocess_block().
- */
-function classier_preprocess_block(&$variables) {
-  $provider = $variables['configuration']['provider'];
-  if ($provider === 'block_content') {
-    $block_content = $variables['content']['#block_content'];
-    $block_id = $block_content->id();
-    // This is done for optimization purposes. We don't need this JS which is
-    // written only for specific blocks.
-    $animated_block_ids = [7, 1, 13, 8, 9, 10];
-    if (in_array($block_id, $animated_block_ids)) {
-      $variables['#attached']['library'][] = 'classier/animations';
-    }
-  }
-
-  if ($provider == 'system') {
-    // Main menu navigation block.
-    if ($variables['plugin_id'] == 'system_menu_block:main') {
-      $variables['#attached']['library'][] = 'classier/menu';
-    }
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function classier_preprocess_html(&$variables) {
-  $path = \Drupal::service('path.current')->getPath();
-  $path_args = explode('/', $path);
-  if (isset($path_args[1]) && isset($path_args[2]) && ($path_args[1] == 'node') && (is_numeric($path_args[2]))) {
-    $variables['attributes']['class'][] = 'page-node-' . $path_args[2];
-  }
-}
-
-/**
- * Implements hook_preprocess_HOOK().
- */
-function classier_preprocess_status_messages(&$variables) {
-  $variables['#attached']['library'][] = 'classier/message';
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $filename) {
+  require_once dirname(__FILE__) . '/includes/' . basename($filename);
 }
