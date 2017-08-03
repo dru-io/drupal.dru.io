@@ -5,19 +5,19 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700'); // Ubuntu
 @font-face{
 	font-family: 'Neris';
-	src: url('../fonts/neris/Neris-Black.otf');
+	src: url('../../fonts/neris/Neris-Black.otf');
 	font-weight: 900;
 	font-style: normal;
 }
 @font-face{
 	font-family: 'Neris';
-	src: url('../fonts/neris/Neris-SemiBold.otf');
+	src: url('../../fonts/neris/Neris-SemiBold.otf');
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face{
 	font-family: 'Neris';
-	src: url('../fonts/neris/Neris-Thin.otf');
+	src: url('../../fonts/neris/Neris-Thin.otf');
 	font-weight: 100;
 	font-style: normal;
 }
@@ -245,11 +245,11 @@ h2{
 	}
 }
 .slick-prev.slick-arrow{
-	background-image: url('../images/icons/i-left-arrow.png');
+	background-image: url('../../images/icons/i-left-arrow.png');
 	left: 0;
 }
 .slick-next.slick-arrow{
-	background-image: url('../images/icons/i-right-arrow.png');
+	background-image: url('../../images/icons/i-right-arrow.png');
 	right: 0;
 }
 .slick__arrow{
@@ -385,7 +385,7 @@ h2{
 	font-size: 14px;
 	padding: 20px 75px 20px 25px;
 	@extend %uppercase;
-	background-image: url('../images/bg/blue-pixel.jpg'), url('../images/bg/right-arrow-btn.png');
+	background-image: url('../../images/bg/blue-pixel.jpg'), url('../../images/bg/right-arrow-btn.png');
 	background-position: 140px 0, 150px 50%;
 	background-repeat: repeat-y, no-repeat;
 	@media screen and (min-width: 480px) and (max-width: 767px) {
@@ -1385,22 +1385,22 @@ ul.menu{
 			}
 		}
 		> .field__item:nth-child(1){
-			background-image: url('../images/bg/D.png');
+			background-image: url('../../images/bg/D.png');
 		}
 		> .field__item:nth-child(2){
-			background-image: url('../images/bg/R.png');
+			background-image: url('../../images/bg/R.png');
 		}
 		> .field__item:nth-child(3){
-			background-image: url('../images/bg/U.png');
+			background-image: url('../../images/bg/U.png');
 		}
 		> .field__item:nth-child(4){
-			background-image: url('../images/bg/P.png');
+			background-image: url('../../images/bg/P.png');
 		}
 		> .field__item:nth-child(5){
-			background-image: url('../images/bg/A.png');
+			background-image: url('../../images/bg/A.png');
 		}
 		> .field__item:nth-child(6){
-			background-image: url('../images/bg/L.png');
+			background-image: url('../../images/bg/L.png');
 		}
 	}
 }
@@ -2159,7 +2159,7 @@ ul.menu{
 //=====================================
 #block-3,
 #block-askaquestion {
-	background-image: url('../images/bg/webform-block-bg.jpg');
+	background-image: url('../../images/bg/webform-block-bg.jpg');
 	background-size: cover;
 	background-position: center;
 }

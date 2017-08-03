@@ -1,9 +1,9 @@
 global-styling:
   css:
     theme:
-      css/modules/bylines.css: {}
-      css/style.css: {}
-      css/animate.css: {}
+      assets/styles/css/modules/bylines.css: {}
+      assets/styles/css/style.css: {}
+      assets/styles/css/animate.css: {}
   # Temporary. All this JS's will be removed.
   dependencies:
     - classier/blazy-fix
@@ -11,7 +11,7 @@ global-styling:
 menu:
   version: VERSION
   js:
-    js/menu.js: {}
+    assets/js/menu.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
@@ -19,7 +19,7 @@ menu:
 message:
   version: VERSION
   js:
-    js/message.js: {}
+    assets/js/message.js: {}
   dependencies:
     - core/jquery
 
@@ -27,7 +27,7 @@ message:
 blazy-fix:
   version: VERSION
   js:
-    js/blazy-fix.js: {}
+    assets/js/blazy-fix.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
@@ -35,7 +35,7 @@ blazy-fix:
 animations:
   version: VERSION
   js:
-    js/anim.js: {}
+    assets/js/anim.js: {}
   dependencies:
     - classier/viewportchecker
 

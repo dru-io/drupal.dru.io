@@ -6,21 +6,21 @@
     //var run = require('gulp-run');
      
     gulp.task('sass', function () {
-        gulp.src('sass/**/*.scss')
+        gulp.src('assets/styles/sass/**/*.scss')
         .pipe(sourcemaps.init({identityMap: true}))
         .pipe(sass()).on('error', sass.logError)
         .pipe(autoprefixer({
             browsers: ['last 10 versions'],
             cascade: false
         }))
-        .pipe(sourcemaps.write('../maps/'))
-        .pipe(gulp.dest('css/'));
+        .pipe(sourcemaps.write('../maps'))
+        .pipe(gulp.dest('assets/styles/css'));
         //.pipe(livereload());
     });
      
     gulp.task('watch',function(){    
         //livereload.listen();
-        gulp.watch('sass/**', function () {
+        gulp.watch('assets/styles/sass/**', function () {
             setTimeout(function () {
                 gulp.start('sass');
             }, 2000);
