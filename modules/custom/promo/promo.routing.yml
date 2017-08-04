@@ -1,0 +1,7 @@
+promo.admin_config.druio_promo:
+  path: '/admin/config/druio-promo'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Dru.io promo settings'
+  requirements:
+    _permission: 'access administration pages'

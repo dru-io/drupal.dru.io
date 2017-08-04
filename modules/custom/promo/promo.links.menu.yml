@@ -1,0 +1,5 @@
+promo.admin_config.druio_promo:
+  title: 'Dru.io promo settings'
+  parent: system.admin_config
+  route_name: promo.admin_config.druio_promo
+  weight: -50

@@ -1,0 +1,6 @@
+druio_opensource_db.settings:
+  title: 'OpenSource database settings'
+  description: 'Prepare database for public access.'
+  parent: promo.admin_config.druio_promo
+  route_name: druio_opensource_db.settings
+  weight: 1

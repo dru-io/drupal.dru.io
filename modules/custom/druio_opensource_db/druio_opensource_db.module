@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Main file for hooks and custom functions.
+ */
+use Drupal\Component\Render\FormattableMarkup;
+use Drupal\Core\Database\Database;
+
+/**
+ * Create opensource version of database. This is the main function that's calls
+ * others.
+ */
+function druio_opensource_db_create() {
+  $connector = \Drupal::service('druio.osdb.connector');
+  // Clean all cache before operations. This is reduce database total size
+  // and remove unnecessary data.
+  drupal_flush_all_caches();
+  // Temporary database file uri.
+  $tmp_db_uri = new FormattableMarkup('public://%filename.sql.gz', [
+    '%filename' => 'dump-' . rand(0, time()),
+  ]);
+  _druio_opensource_db_mysql_dump('druio_opensource_db', $tmp_db_uri);
+}
+
+/**
+ * Dump database to file.
+ *
+ * @param string $connection_name
+ *   Either 'default' or 'druio_opensource_db' for which database dump must be created.
+ * @param string $filepath
+ *   URI to file in which record dump.
+ */
+function _druio_opensource_db_mysql_dump(string $connection_name, string $filepath) {
+  $connection_info = Database::getConnectionInfo($connection_name);
+  ksm($connection_info);
+  // @todo continue
+}

@@ -1,0 +1,3 @@
+services:
+  druio.osdb.connector:
+    class: Drupal\druio_opensource_db\Service\Connector
