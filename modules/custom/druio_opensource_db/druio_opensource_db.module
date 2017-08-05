@@ -27,6 +27,18 @@ function druio_opensource_db_create() {
 
   // Delete temporary file.
   file_unmanaged_delete($tmp_db_uri);
+
+  // Clean data.
+  _druio_opensource_db_clean_data();
+
+  // Cleaned database file. This will be result file for public access.
+  $clean_db_uri = new FormattableMarkup('@path/@filename.sql.gz', [
+    '@path' => \Drupal::service('file_system')->realpath('public://'),
+    '@filename' => 'database',
+  ]);
+
+  // Dump cleaned database.
+  _druio_opensource_db_mysql_dump('druio_opensource_db', $clean_db_uri);
 }
 
 /**
@@ -87,4 +99,24 @@ function _druio_opensource_db_mysql_import(string $connection_name, string $file
   exec($cmd, $output, $result);
   $connector->setMainDatabaseActive();
   return $result;
+}
+
+/**
+ * Clean up all sensitive data here in second database.
+ */
+function _druio_opensource_db_clean_data() {
+
+}
+
+/**
+ * Implements hook_cron().
+ */
+function druio_opensource_db_cron() {
+  $expires = \Drupal::state()->get('druio_opensource_db.last_check', 0);
+  // Every 24 hours.
+  $timeout = 60 * 60 * 24;
+  if ($expires < time()) {
+    druio_opensource_db_create();
+    \Drupal::state()->set('druio_opensource_db.last_check', time() + $timeout);
+  }
 }
