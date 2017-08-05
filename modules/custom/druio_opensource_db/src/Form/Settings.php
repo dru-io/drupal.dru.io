@@ -2,10 +2,8 @@
 
 namespace Drupal\druio_opensource_db\Form;
 
-use Drupal\Core\Database\Database;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Masterminds\HTML5\Exception;
 
 /**
  * {@inheritdoc}

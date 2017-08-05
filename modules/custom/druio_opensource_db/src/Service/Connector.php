@@ -11,12 +11,15 @@ class Connector {
 
   /**
    * Information about second database connection.
+   *
+   * @var array
    */
   private $connectionInfo;
 
   /**
    * Store connection object.
-   * @var $database \Drupal\Core\Database\Connection;
+   *
+   * @var \Drupal\Core\Database\Connection
    */
   private $database;
 
@@ -45,8 +48,10 @@ class Connector {
   }
 
   /**
-   * Set second database as current active. Return connection for it for
-   * further query execution.
+   * Set second database as current active.
+   *
+   * @return \Drupal\Core\Database\Connection
+   *   Return connection for it for further query execution.
    */
   public function setSecondDatabaseActive() {
     Database::setActiveConnection('druio_opensource_db');

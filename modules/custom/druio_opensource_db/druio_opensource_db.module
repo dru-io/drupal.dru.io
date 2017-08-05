@@ -4,35 +4,87 @@
  * @file
  * Main file for hooks and custom functions.
  */
+
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Database\Database;
 
 /**
- * Create opensource version of database. This is the main function that's calls
- * others.
+ * Create opensource version of database.
  */
 function druio_opensource_db_create() {
-  $connector = \Drupal::service('druio.osdb.connector');
   // Clean all cache before operations. This is reduce database total size
   // and remove unnecessary data.
   drupal_flush_all_caches();
   // Temporary database file uri.
-  $tmp_db_uri = new FormattableMarkup('public://%filename.sql.gz', [
-    '%filename' => 'dump-' . rand(0, time()),
+  $tmp_db_uri = new FormattableMarkup('@path/@filename.sql.gz', [
+    '@path' => \Drupal::service('file_system')->realpath('public://'),
+    '@filename' => 'dump-' . rand(0, time()),
   ]);
-  _druio_opensource_db_mysql_dump('druio_opensource_db', $tmp_db_uri);
+  _druio_opensource_db_mysql_dump('default', $tmp_db_uri);
+
+  // Import original database dump into second database.
+  _druio_opensource_db_mysql_import('druio_opensource_db', $tmp_db_uri);
+
+  // Delete temporary file.
+  file_unmanaged_delete($tmp_db_uri);
 }
 
 /**
  * Dump database to file.
  *
  * @param string $connection_name
- *   Either 'default' or 'druio_opensource_db' for which database dump must be created.
+ *   Either 'default' or 'druio_opensource_db' for which database dump must be
+ *   created.
  * @param string $filepath
  *   URI to file in which record dump.
+ *
+ * @return mixed
+ *   Command execution results.
  */
 function _druio_opensource_db_mysql_dump(string $connection_name, string $filepath) {
   $connection_info = Database::getConnectionInfo($connection_name);
-  ksm($connection_info);
-  // @todo continue
+  $cmd = new FormattableMarkup('mysqldump -u @username -p@password @database | gzip > @dumpname', [
+    '@username' => $connection_info['default']['username'],
+    '@password' => $connection_info['default']['password'],
+    '@database' => $connection_info['default']['database'],
+    '@dumpname' => $filepath,
+  ]);
+  exec($cmd, $output, $result);
+  return $result;
+}
+
+/**
+ * Import dump file into database.
+ *
+ * @param string $connection_name
+ *   Either 'default' or 'druio_opensource_db' for which database dump must be
+ *   created.
+ * @param string $filepath
+ *   URI to file in which record dump.
+ *
+ * @return mixed
+ *   Command execution results.
+ */
+function _druio_opensource_db_mysql_import(string $connection_name, string $filepath) {
+  /** @var Drupal\druio_opensource_db\Service\Connector $connector */
+  $connector = \Drupal::service('druio.osdb.connector');
+  $connection_info = Database::getConnectionInfo($connection_name);
+  $database = $connector->setSecondDatabaseActive();
+  // Checkout, is database has tables.
+  $tables = $database->query('SHOW TABLES')->fetchCol();
+  // Clear tables if they exist.
+  if (!empty($tables)) {
+    foreach ($tables as $table) {
+      $database->schema()->dropTable($table);
+    }
+  }
+  $cmd = new FormattableMarkup('gunzip -c @dumpname | mysql -u @username -p@password @database', [
+    '@username' => $connection_info['default']['username'],
+    '@password' => $connection_info['default']['password'],
+    '@database' => $connection_info['default']['database'],
+    '@dumpname' => $filepath,
+  ]);
+  exec($cmd, $output, $result);
+  $connector->setMainDatabaseActive();
+  return $result;
 }
