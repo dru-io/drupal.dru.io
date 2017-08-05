@@ -105,7 +105,30 @@ function _druio_opensource_db_mysql_import(string $connection_name, string $file
  * Clean up all sensitive data here in second database.
  */
 function _druio_opensource_db_clean_data() {
+  /** @var Drupal\druio_opensource_db\Service\Connector $connector */
+  $connector = \Drupal::service('druio.osdb.connector');
+  $database = $connector->setSecondDatabaseActive();
 
+  // Create fake mails and password.
+  $database->update('users_field_data')
+    ->expression('mail', "CONCAT('user', uid, '@example.com')")
+    ->expression('init', "CONCAT('user', uid, '@example.com')")
+    ->fields([
+      'pass' => 'use drush uli',
+    ])
+    ->condition('uid', 0, '>')
+    ->execute();
+
+  // Clean up watchdog table.
+  $database->truncate('watchdog')->execute();
+
+  // Clean webform data.
+  $database->truncate('webform_submission')->execute();
+  $database->truncate('webform_submission_data')->execute();
+  $database->truncate('webform_submission_log')->execute();
+
+  // Enable main database.
+  $connector->setMainDatabaseActive();
 }
 
 /**
