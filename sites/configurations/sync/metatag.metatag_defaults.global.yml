@@ -7,6 +7,7 @@ _core:
 id: global
 label: Global
 tags:
+  canonical_url: 'https://drupal.dru.io'
   description: 'Что такое CMS Drupal и какие преимущества использования данной системы? Примеры сайтов, полезные ссылки и подробное объяснение.'
   keywords: 'drupal, друпал, что такое друпал, CMS Drupal'
   title: 'Почему мы выбираем Drupal'

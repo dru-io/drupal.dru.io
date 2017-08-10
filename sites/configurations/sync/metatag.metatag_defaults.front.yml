@@ -7,5 +7,5 @@ _core:
 id: front
 label: 'Front page'
 tags:
-  canonical_url: '[site:url]'
+  canonical_url: 'https://drupal.dru.io'
   shortlink: '[site:url]'
