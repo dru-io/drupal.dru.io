@@ -14,6 +14,7 @@
 # http://www.robotstxt.org/robotstxt.html
 
 User-agent: *
+Host: https://drupal.dru.io
 # CSS, JS, Images
 Allow: /core/*.css$
 Allow: /core/*.css?

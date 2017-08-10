@@ -33,6 +33,7 @@ module:
   fz152_contact: 0
   geolocation: 0
   geolocation_google_places_api: 0
+  google_analytics: 0
   help: 0
   history: 0
   image: 0
