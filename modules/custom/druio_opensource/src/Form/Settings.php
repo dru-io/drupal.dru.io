@@ -93,6 +93,13 @@ class Settings extends ConfigFormBase {
       '#dropbutton' => 'save',
     ];
 
+    $form['actions']['save_and_export_config'] = [
+      '#type' => 'submit',
+      '#value' => 'TEST: ' . $this->t('Save and exportConfig'),
+      '#submit' => ['::save', '::exportConfig'],
+      '#dropbutton' => 'save',
+    ];
+
     return $form;
   }
 
@@ -114,7 +121,17 @@ class Settings extends ConfigFormBase {
    * Create cleaned database dump.
    */
   public function createDump(array $form, FormStateInterface $form_state) {
-    druio_opensource_db_create();
+    druio_opensource_create();
+  }
+
+  /**
+   * {@inheritdoc}
+   *
+   * @todo Remove it after complete config export.
+   */
+  public function exportConfig() {
+    $config_export = \Drupal::service('druio.os.config_export');
+    $config_export->export();
   }
 
 }

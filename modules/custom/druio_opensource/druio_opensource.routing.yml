@@ -1,4 +1,4 @@
-druio_opensource_db.settings:
+druio_opensource.settings:
   path: '/admin/config/druio-promo/opensource-database'
   defaults:
     _form: '\Drupal\druio_opensource\Form\Settings'

@@ -31,6 +31,12 @@ function druio_opensource_create() {
   // Clean data.
   _druio_opensource_db_clean_data();
 
+  // Clean configuration data.
+  _druio_opensource_config_clean_data();
+
+  // Export configurations.
+  _druio_opensource_config_export();
+
   // Cleaned database file. This will be result file for public access.
   $clean_db_uri = new FormattableMarkup('@path/@filename.sql.gz', [
     '@path' => \Drupal::service('file_system')->realpath('public://'),
@@ -78,8 +84,8 @@ function _druio_opensource_db_mysql_dump(string $connection_name, string $filepa
  *   Command execution results.
  */
 function _druio_opensource_db_mysql_import(string $connection_name, string $filepath) {
-  /** @var Drupal\druio_opensource_db\Service\Connector $connector */
-  $connector = \Drupal::service('druio.osdb.connector');
+  /** @var Drupal\druio_opensource\Service\Connector $connector */
+  $connector = \Drupal::service('druio.os.db_connector');
   $connection_info = Database::getConnectionInfo($connection_name);
   $database = $connector->setSecondDatabaseActive();
   // Checkout, is database has tables.
@@ -105,8 +111,8 @@ function _druio_opensource_db_mysql_import(string $connection_name, string $file
  * Clean up all sensitive data here in second database.
  */
 function _druio_opensource_db_clean_data() {
-  /** @var Drupal\druio_opensource_db\Service\Connector $connector */
-  $connector = \Drupal::service('druio.osdb.connector');
+  /** @var Drupal\druio_opensource\Service\Connector $connector */
+  $connector = \Drupal::service('druio.os.db_connector');
   $database = $connector->setSecondDatabaseActive();
 
   // Create fake mails and password.
@@ -129,6 +135,49 @@ function _druio_opensource_db_clean_data() {
 
   // Enable main database.
   $connector->setMainDatabaseActive();
+}
+
+/**
+ * Clean configurations from sensitive data.
+ *
+ * Active configuration is stored in database, so we easy can clean them using
+ * default config API.
+ */
+function _druio_opensource_config_clean_data() {
+  /** @var Drupal\druio_opensource\Service\Connector $connector */
+  $connector = \Drupal::service('druio.os.db_connector');
+  $connector->setSecondDatabaseActive();
+  /** @var Drupal\Core\Config\ConfigFactory $config_factory */
+  $config_factory = \Drupal::configFactory();
+
+  // Clean webform email destination.
+  $config = $config_factory->getEditable('webform.webform.ask_a_question');
+  $webform_ask_a_question = $config->get();
+  $webform_ask_a_question['handlers']['email']['settings']['to_mail'] = 'example@example.com';
+  $config->setData($webform_ask_a_question);
+}
+
+/**
+ * Implements hook_druio_opensource_config_alter().
+ *
+ * Don't forget to clean configurations in database, because active settings
+ * also will be exported with cleaned db and must be cleaned as well.
+ */
+function druio_opensource_druio_opensource_config_alter(&$data, $name) {
+  switch ($name) {
+    case 'webform.webform.ask_a_question':
+      $data['handlers']['email']['settings']['to_mail'] = 'example@example.com';
+      break;
+  }
+}
+
+/**
+ * Export configurations with cleaned data.
+ */
+function _druio_opensource_config_export() {
+  /** @var Drupal\druio_opensource\Service\ConfigExport $config_export */
+  $config_export = \Drupal::service('druio.os.config_export');
+  $config_export->export();
 }
 
 /**

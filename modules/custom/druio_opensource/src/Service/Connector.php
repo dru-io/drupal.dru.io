@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\druio_opensource_db\Service;
+namespace Drupal\druio_opensource\Service;
 
 use Drupal\Core\Database\Database;
 

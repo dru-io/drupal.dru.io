@@ -1,3 +1,6 @@
 services:
-  druio.os.connector:
-    class: Drupal\druio_opensource_db\Service\Connector
+  druio.os.db_connector:
+    class: Drupal\druio_opensource\Service\Connector
+  druio.os.config_export:
+    class: Drupal\druio_opensource\Service\ConfigExport
+    arguments: ['@config.storage', '@config.storage.sync']
