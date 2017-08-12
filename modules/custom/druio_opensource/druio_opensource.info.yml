@@ -1,0 +1,10 @@
+name: Dru.io — OpenSource
+description: 'Export database and configurations for OpenSource distribution..'
+core: 8.x
+version: 1.x
+type: module
+
+package: Dru.io
+
+dependencies:
+  - promo

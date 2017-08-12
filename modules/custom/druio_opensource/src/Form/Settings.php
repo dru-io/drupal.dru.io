@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\druio_opensource_db\Form;
+namespace Drupal\druio_opensource\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;

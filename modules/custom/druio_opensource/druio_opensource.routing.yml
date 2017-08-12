@@ -1,7 +1,7 @@
 druio_opensource_db.settings:
   path: '/admin/config/druio-promo/opensource-database'
   defaults:
-    _form: '\Drupal\druio_opensource_db\Form\Settings'
+    _form: '\Drupal\druio_opensource\Form\Settings'
     _title: 'OpenSource database settings'
   requirements:
-    _permission: 'administer druio opensource_db settings'
+    _permission: 'administer druio opensource settings'

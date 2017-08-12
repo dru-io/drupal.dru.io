@@ -9,9 +9,9 @@ use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Core\Database\Database;
 
 /**
- * Create opensource version of database.
+ * Create opensource version of database and configs.
  */
-function druio_opensource_db_create() {
+function druio_opensource_create() {
   // Clean all cache before operations. This is reduce database total size
   // and remove unnecessary data.
   drupal_flush_all_caches();
@@ -134,12 +134,12 @@ function _druio_opensource_db_clean_data() {
 /**
  * Implements hook_cron().
  */
-function druio_opensource_db_cron() {
-  $expires = \Drupal::state()->get('druio_opensource_db.last_check', 0);
+function druio_opensource_cron() {
+  $expires = \Drupal::state()->get('druio_opensource.last_check', 0);
   // Every 24 hours.
   $timeout = 60 * 60 * 24;
   if ($expires < time()) {
-    druio_opensource_db_create();
-    \Drupal::state()->set('druio_opensource_db.last_check', time() + $timeout);
+    druio_opensource_create();
+    \Drupal::state()->set('druio_opensource.last_check', time() + $timeout);
   }
 }
