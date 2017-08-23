@@ -38,7 +38,6 @@ module:
   history: 0
   image: 0
   imagemagick: 0
-  kint: 0
   language: 0
   link: 0
   locale: 0

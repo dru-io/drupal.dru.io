@@ -8,4 +8,3 @@ id: front
 label: 'Front page'
 tags:
   canonical_url: 'https://drupal.dru.io'
-  shortlink: '[site:url]'

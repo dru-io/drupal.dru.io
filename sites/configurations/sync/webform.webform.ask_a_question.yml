@@ -1,4 +1,3 @@
-uuid: 26fe5f78-83ea-4ec0-99a5-abe17408a8ed
 langcode: ru
 status: open
 dependencies: {  }
@@ -30,6 +29,7 @@ settings:
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
+  form_reset: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_unsaved: false
@@ -51,6 +51,7 @@ settings:
   preview_message: ''
   preview_attributes: {  }
   preview_excluded_elements: {  }
+  preview_exclude_empty: true
   draft: none
   draft_multiple: false
   draft_auto_save: false
@@ -81,27 +82,35 @@ access:
       - anonymous
       - authenticated
     users: {  }
+    permissions: {  }
   view_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   purge_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   view_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_own:
     roles: {  }
     users: {  }
+    permissions: {  }
 handlers:
   email:
     id: email
@@ -125,8 +134,10 @@ handlers:
       body: "<p><strong>Заполнена заявка на сайте &quot;</strong>[webform:title]<strong>&quot;</strong></p>\n\n<p>Заполнено [webform_submission:created]</p>\n\n<p>Информация об отправителе:<br />\nИмя: [webform_submission:values:name]<br />\nE-mail: [webform_submission:values:e_mail]<br />\nВопрос: [webform_submission:values:question]</p>"
       excluded_elements: {  }
       ignore_access: false
+      exclude_empty: true
       html: true
       attachments: false
       debug: false
       reply_to: ''
       return_path: ''
+uuid: 26fe5f78-83ea-4ec0-99a5-abe17408a8ed
