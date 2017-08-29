@@ -521,6 +521,9 @@ main .block {
   font-size: 30px;
   font-weight: 900;
   position: relative; }
+  @media screen and (min-width: 479px) {
+    .paragraph--type--branding {
+      padding-top: 15px; } }
   @media screen and (min-width: 1px) and (max-width: 479px) {
     .paragraph--type--branding {
       font-size: 24px; } }
